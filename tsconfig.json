@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": false,
+        "resolveJsonModule": true,
+        "outDir": "lib",
+        "rootDir": "src",
+        "jsx": "react",
+        "lib": [
+            "es6"
+        ],
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "esnext"
+    },
+    "typeRoots": [
+        "node_module/@types"
+    ],
+    "fileGlob": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.json"
+    ],
+    "types": [
+        "react",
+        "react-native"
+    ],
+    "include": [
+        "src/**/*.js",
+        "src/**/*.jsx",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.json"
+    ],
+    "paths": {
+        "@constants": ["./src/helpers/constants.ts"],       
+    },
+    "exclude": [
+        "node_modules",
+        "babel.config.js",
+        "metro.config.js",
+        "jest.config.js",
+        "__tests__",
+        "lib",
+        "android",
+        "ios",
+        "index.js",
+        "gulpfile.js"
+    ]
+}
