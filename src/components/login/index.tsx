@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, Vibration, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View } from 'react-native';
 import styles from './style';
 import getComponentStyle from '../../helpers/responsive';
 import { Form } from './components';
@@ -8,7 +7,7 @@ const _styles = getComponentStyle(styles);
 const Login = (props: any) => {
     const { navigation = null } = { ...props }
     return (
-        <View style={styles.container}>
+        <View style={_styles.container}>
             <Form />
         </View >
     )

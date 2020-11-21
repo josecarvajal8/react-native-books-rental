@@ -5,6 +5,9 @@ import utilities from '../../../../helpers/utilities';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { validMail } from '../../../../config/constants';
 import TextField from '../textField';
+import getComponentStyle from '../../../../helpers/responsive';
+import styles from './style';
+import { Buttons } from '../../../commons';
 interface ILogin {
     name: string;
     lastName: string;
@@ -15,23 +18,27 @@ enum FieldTypes {
     PICKER = 'PICKER',
     CHECKBOX = 'CHECKBOX'
 }
+const _styles = getComponentStyle(styles);
 const formFieldsProps: any = {
     name: {
         type: FieldTypes.TEXT,
         validation: (data: string) => data.length > 2,
-        label: 'Name'
+        label: 'Name',
+        errorLabel: 'Place a valid name'
     },
     lastName: {
         type: FieldTypes.TEXT,
         validation: (data: string) => data.length > 3,
-        label: 'Lastname'
+        label: 'Lastname',
+        errorLabel: 'Place a valid lastname'
     },
     email: {
         type: FieldTypes.TEXT,
         validation: (data: string | any) => {
             return validMail.test(data)
         },
-        label: 'Mail'
+        label: 'Mail',
+        errorLabel: 'Place a valid mail'
     }
 }
 const formValues: ILogin = {
@@ -39,39 +46,54 @@ const formValues: ILogin = {
     lastName: '',
     email: ''
 };
-const inputHandler = (type = 'DEFAULT', handleChange = Function, handleBlur: Function, values = null, fieldId = '') => {
-    const handler: any = {
-        [FieldTypes.TEXT]: <TextField
-            handleBlur={handleBlur}
-            handleChange={handleChange}
-            values={values}
-            fieldId={fieldId} />,
-        ['DEFAULT']: <TextField
-            handleBlur={handleBlur}
-            handleChange={handleChange}
-            values={values}
-            fieldId={fieldId} />
+const inputHandler =
+    (type = 'DEFAULT', handleChange = Function, handleBlur: Function,
+        values = null, fieldId = '', handlerErrors: Function, label = '') => {
+        const handler: any = {
+            [FieldTypes.TEXT]: <TextField
+                handleBlur={handleBlur}
+                handleChange={handleChange}
+                values={values}
+                fieldId={fieldId}
+                handlerErrors={handlerErrors} label={label} />,
+            ['DEFAULT']: <TextField
+                handleBlur={handleBlur}
+                handleChange={handleChange}
+                values={values}
+                fieldId={fieldId}
+                handlerErrors={handlerErrors} />
+        }
+        return handler[type];
     }
-    return handler[type];
-}
-const renderInputFields = (handleChange: any, handleBlur: any, values: any) => {
-    const _values: string[] = Object.keys(values);
-    const [formErrors, setFormErrors] = useState({});
-    return (
-        <>
-            {
-                utilities.arrayHasItems(_values) && _values.map((fieldId: string, index: number) => {
-                    const { type = 'DEFAULT' } = { ...formFieldsProps[fieldId] }
-                    return (
-                        <View key={index}>
-                            {inputHandler(type, handleChange, handleBlur, values, fieldId)}
-                        </View>
-                    )
-                })
-            }
-        </>);
-}
+
 const Form = () => {
+    const initialFormErrors: { [key: string]: string } = {};
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
+    const setErrors = (values: any, fieldId: string) => {
+        const { validation = null, errorLabel = null } = { ...formFieldsProps[fieldId] };
+        const validate: boolean = !!validation ? validation(values[fieldId] || '') : false;
+        const errorValue = !validate ? errorLabel : null;
+        setFormErrors({ ...formErrors, [fieldId]: errorValue })
+    }
+    const renderInputFields = (handleChange: any, handleBlur: any, values: any) => {
+        const _values: string[] = Object.keys(values);
+        return (
+            <>
+                {
+                    utilities.arrayHasItems(_values) && _values.map((fieldId: string, index: number) => {
+                        const { type = 'DEFAULT', label = '' } = { ...formFieldsProps[fieldId] };
+                        const validationError = formErrors[fieldId] || null
+
+                        return (
+                            <View key={index} style={_styles.containerInput}>
+                                {inputHandler(type, handleChange, handleBlur, values, fieldId, setErrors, label)}
+                                {!!validationError && <Text>{validationError}</Text>}
+                            </View>
+                        )
+                    })
+                }
+            </>);
+    }
     return (
         <Formik
             initialValues={formValues}
@@ -81,9 +103,9 @@ const Form = () => {
                 (
                     <>
                         {renderInputFields(handleChange, handleBlur, values)}
-                        < TouchableOpacity onPress={() => handleSubmit()}>
+                        <Buttons.Raised action={handleSubmit} >
                             <Text>{'Login'}</Text>
-                        </TouchableOpacity>
+                        </Buttons.Raised>
                     </>
                 )}
         </Formik >
