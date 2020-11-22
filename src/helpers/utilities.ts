@@ -8,10 +8,12 @@ const arrayHasItems = (arr: Array<any> = []) => {
 const isObject = (obj: { [key: string]: any }) => {
     return Object.prototype.toString.call(obj) === '[object Object]'
 }
+const range = (start: number, stop: number, step: number) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 const isNumber = (value: any) => Object.prototype.toString.call(value) === '[object Number]';
 export default {
     has,
     arrayHasItems,
     isNumber,
-    isObject
+    isObject,
+    range
 }

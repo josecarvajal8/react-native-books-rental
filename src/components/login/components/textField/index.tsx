@@ -2,16 +2,17 @@ import React from 'react';
 import { TextInput } from 'react-native';
 import getComponentStyle from '../../../../helpers/responsive';
 import styles from './style';
-interface ITextField {
-    handleChange: Function,
-    handleBlur: Function,
-    values: any,
-    fieldId: string,
-    handlerErrors: Function,
-    label?: string
-}
 const _styles = getComponentStyle(styles);
-const TextField = ({ handleChange, handleBlur, values, fieldId, handlerErrors, label = '' }: ITextField) => {
+interface ITextField {
+    handleChange: Function;
+    handleBlur: Function;
+    values: any;
+    fieldId: string;
+    handlerErrors: Function;
+    label?: string;
+    disable?: boolean;
+}
+const TextField = ({ handleChange, handleBlur, values, fieldId, handlerErrors, label = '', disable = false }: ITextField) => {
     return (<TextInput
         style={_styles.textField}
         onChangeText={handleChange(fieldId)}
@@ -21,6 +22,7 @@ const TextField = ({ handleChange, handleBlur, values, fieldId, handlerErrors, l
                 handlerErrors(values, fieldId)
             }
         }
+        editable={!disable}
         placeholder={label}
         value={values[fieldId]}
     />);
