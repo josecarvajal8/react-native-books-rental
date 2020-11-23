@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { TouchableOpacity, View, Text, FlatList } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import getComponentStyle from '../../../../helpers/responsive';
+import getComponentStyle from '../../../../../helpers/responsive';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 export interface IOption {
@@ -31,16 +31,21 @@ const PickerField = ({ value, setFieldValue, fieldId, options, label }: IPicker)
     }
     const renderOptions = () => {
         return (
-            <FlatList data={options} renderItem={({ item, index }) => {
-                const { label, value } = { ...item };
-                return (
-                    <TouchableOpacity
-                        key={value}
-                        onPress={() => selectOption(value)}>
-                        <Text>{label}</Text>
-                    </TouchableOpacity>
-                )
-            }} />
+            <FlatList data={options}
+                keyExtractor={({ value }) => value}
+                renderItem={({ item }) => {
+                    const { label, value } = { ...item };
+                    return (
+                        <TouchableOpacity
+                            key={value}
+                            onPress={() => {
+                                expandList()
+                                selectOption(value)
+                            }}>
+                            <Text>{label}</Text>
+                        </TouchableOpacity>
+                    )
+                }} />
         )
     }
     return (

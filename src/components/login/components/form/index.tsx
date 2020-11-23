@@ -3,16 +3,20 @@ import { Text, View } from 'react-native';
 import { Formik } from 'formik';
 import utilities from '../../../../helpers/utilities';
 import { agesRange, validMail } from '../../../../config/constants';
-import TextField from '../textField';
+import { CheckBox, TextField, PickerField } from '../inputs'
 import getComponentStyle from '../../../../helpers/responsive';
 import styles from './style';
 import { Buttons } from '../../../commons';
-import PickerField, { IOption } from '../picker/index';
+import { IOption } from '../inputs/picker/index';
+interface IForm {
+    navigation: Function
+}
 interface ILogin {
     name: string;
     lastName: string;
     email: string;
     ages: string;
+    terms: boolean;
 }
 enum FieldTypes {
     TEXT = 'TEXT',
@@ -45,13 +49,19 @@ const formFieldsProps: any = {
         type: FieldTypes.PICKER,
         label: 'Ages',
         errorLabel: 'Must pick your age'
+    },
+    terms: {
+        type: FieldTypes.CHECKBOX,
+        label: 'Terms and conditions',
+        errorLabel: 'Must accept terms and conditions'
     }
 }
 const formValues: ILogin = {
     name: '',
     lastName: '',
     email: '',
-    ages: ''
+    ages: '',
+    terms: false
 };
 const [start, stop] = [...agesRange];
 const step = 1;
@@ -61,7 +71,7 @@ const inputHandler =
     (type = 'DEFAULT', handleChange = Function, handleBlur: Function,
         values = {}, fieldId = '', handlerErrors: Function, label = '',
         setFieldValue: Function) => {
-        const value = (values as any)[fieldId] || '';
+        const value = (values as any)[fieldId];
         const handler: any = {
             [FieldTypes.TEXT]: <TextField
                 handleBlur={handleBlur}
@@ -76,6 +86,11 @@ const inputHandler =
                 setFieldValue={setFieldValue}
                 value={value}
             />,
+            [FieldTypes.CHECKBOX]: <CheckBox
+                fieldId={fieldId}
+                label={label}
+                onChangeValue={setFieldValue}
+                value={value} />,
             ['DEFAULT']: <TextField
                 handleBlur={handleBlur}
                 handleChange={handleChange}
@@ -86,7 +101,7 @@ const inputHandler =
         return handler[type];
     }
 
-const Form = () => {
+const Form = ({ navigation }: IForm) => {
     const initialFormErrors: { [key: string]: string } = {};
     const [formErrors, setFormErrors] = useState(initialFormErrors);
     const setErrors = (values: any, fieldId: string) => {
@@ -94,6 +109,12 @@ const Form = () => {
         const validate: boolean = !!validation ? validation(values[fieldId] || '') : false;
         const errorValue = !validate ? errorLabel : null;
         setFormErrors({ ...formErrors, [fieldId]: errorValue })
+    }
+    const validateForm = (values: { [key: string]: any }) => {
+        const validate = Object.keys(values).filter((el: string) => !!values[el]);
+        const formErrorValidate = Object.keys(formErrors).filter((el: string) => !!formErrors[el]);
+        const validationFilledForm = !Boolean(validate.length === Object.keys(values).length);
+        return validationFilledForm || utilities.arrayHasItems(formErrorValidate);
     }
     const renderInputFields = (handleChange: any, handleBlur: any, values: any, setFieldValue: Function) => {
         const _values: string[] = Object.keys(values);
@@ -116,13 +137,18 @@ const Form = () => {
     return (
         <Formik
             initialValues={formValues}
-            onSubmit={values => console.log(values)}
+            onSubmit={values => {
+                console.log(values)
+                navigation();
+            }}
         >
             {({ handleChange, handleBlur, handleSubmit, values, setFieldValue }: any) =>
                 (
                     <>
                         {renderInputFields(handleChange, handleBlur, values, setFieldValue)}
-                        <Buttons.Raised action={handleSubmit} >
+                        <Buttons.Raised action={handleSubmit} disabled={validateForm(values)}
+
+                        >
                             <Text>{'Login'}</Text>
                         </Buttons.Raised>
                     </>

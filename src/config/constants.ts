@@ -4,5 +4,6 @@ export const colors = {
     white: '#ffffff',
     primary: '#4285f4',
     gey_input: '#626565',
-    black: '#000'
+    black: '#000',
+    green_checkbox: '#589441'
 }

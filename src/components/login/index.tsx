@@ -8,7 +8,7 @@ const Login = (props: any) => {
     const { navigation = null } = { ...props }
     return (
         <View style={_styles.container}>
-            <Form />
+            <Form navigation={() => navigation.navigate('Home')} />
         </View >
     )
 }

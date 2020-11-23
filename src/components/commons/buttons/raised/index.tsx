@@ -11,7 +11,6 @@ interface IRaisedButton {
 const _styles = getComponentStyle(styles);
 const { opacity = 1 } = { ..._styles.disabled }
 const RaisedButton = ({ children, styles = _styles.container, action, disabled = false }: IRaisedButton) => {
-    console.log(disabled)
     return (
         <TouchableOpacity disabled={disabled}
             onPress={() => action()}

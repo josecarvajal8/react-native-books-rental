@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../../config/constants';
+import { colors } from '../../../../../config/constants';
 const styles = StyleSheet.create({
     textField: {
         width: 300,
