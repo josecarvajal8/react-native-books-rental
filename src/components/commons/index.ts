@@ -1,2 +1,4 @@
 import * as Buttons from './buttons';
-export { Buttons };
+import Card from './card';
+import NavBar from './navBar';
+export { Buttons, Card, NavBar };
