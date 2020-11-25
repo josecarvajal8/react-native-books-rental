@@ -17,7 +17,8 @@ const styles = {
         marginLeft: 18
     },
     containerSuggestions: {
-        marginTop: 20
+        marginTop: 20,
+        height: 150
     },
     commentsContainerHeight: {
         minHeight: 260,

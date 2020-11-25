@@ -19,7 +19,11 @@ const Detail = (props: any) => {
     const showViewAll = comments.length > renderCommentsAmount;
     return (
         <ScrollView style={_styles.container} bounces={false}>
-            <NavBar key={'navbar'} />
+            <NavBar key={'navbar'} >
+                <View style={_styles.containerNavBar}>
+                    <Text>{'DETAIL'}</Text>
+                </View>
+            </NavBar>
             <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
                 <View style={_styles.bookInfoContainer}>
                     <Image style={_styles.bookImg}
