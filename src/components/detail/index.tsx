@@ -1,17 +1,26 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, ScrollView } from 'react-native';
+import { mockBooks } from '../../config/constants';
 import getComponentStyle from '../../helpers/responsive';
+import utilities from '../../helpers/utilities';
 import { Buttons, Card, NavBar } from '../commons';
+import { CommentsList, SuggestionsCarrousel } from './components';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 
 const Detail = (props: any) => {
     const { route: { params = {} } = {} } = { ...props };
-    const { author = '', title = '', genre = '', year = '', publisher = '', image_url = '' } = { ...params };
+    const { author = '', title = '', genre = '', year = '', publisher = '', image_url = '', comments = [], id = 0 } = { ...params };
+    const suggestions: Array<any> = mockBooks.filter((el: any) => {
+        const { id: _id = 0, genre: _genre = '' } = { ...el };
+        return (id !== _id) && (genre === _genre)
+    })
+    const renderCommentsAmount = 2;
+    const showViewAll = comments.length > renderCommentsAmount;
     return (
-        <View style={_styles.container}>
-            <NavBar />
-            <Card touchable={false} styles={_styles.detailBook}>
+        <ScrollView style={_styles.container} bounces={false}>
+            <NavBar key={'navbar'} />
+            <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
                 <View style={_styles.bookInfoContainer}>
                     <Image style={_styles.bookImg}
                         resizeMode={'contain'}
@@ -34,12 +43,21 @@ const Detail = (props: any) => {
                     </Buttons.Raised>
                 </View>
             </Card>
-            <Card styles={_styles.commentsContainer}>
-                <Text>
-                    {'Comments'}
-                </Text>
-            </Card>
-        </View>
+            {utilities.arrayHasItems(suggestions) && <View key={'suggestions'}
+                style={_styles.containerSuggestions}>
+                <SuggestionsCarrousel data={suggestions} />
+            </View>}
+            {utilities.arrayHasItems(comments) && <Card key={'comments'}
+                styles={showViewAll ? { ..._styles.commentsContainer, ..._styles.commentsContainerHeight } : _styles.commentsContainer}
+                touchable={false}>
+                <View style={_styles.containerCommentsList}>
+                    <CommentsList data={comments} renderElementsAmount={renderCommentsAmount} scrollable={false} />
+                </View>
+                {showViewAll && <Buttons.Flat action={() => console.log('view all')} styles={_styles.btnViewAll}>
+                    <Text>{'View All'}</Text>
+                </Buttons.Flat>}
+            </Card>}
+        </ScrollView>
     )
 }
 export default Detail;
