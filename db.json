@@ -8,7 +8,17 @@
       "genre": "Short story",
       "publisher": "Butterworth-Heinemann",
       "year": "1968",
-      "image_url": null
+      "image_url": null,
+      "comments": [
+        {
+          "user_nick": "John Appleseed",
+          "comment_text": "It was great to see you again earlier. Lets definitely wrap a cup of coffee anytime soon, congrats!"
+        },
+        {
+          "user_nick": "Susan Collins",
+          "comment_text": "Tremendus book! It was amazing, totally recommend this beauty, you wont regret it if you give it a chance!"
+        }
+      ]
     },
     {
       "id": 2,
@@ -17,7 +27,33 @@
       "genre": "other",
       "publisher": "Pocket Books",
       "year": "1989",
-      "image_url": null
+      "image_url": null,
+      "comments": [
+        {
+          "user_nick": "John Appleseed",
+          "comment_text": "It was great to see you again earlier. Lets definitely wrap a cup of coffee anytime soon, congrats!"
+        },
+        {
+          "user_nick": "Susan Collins",
+          "comment_text": "Tremendus book! It was amazing, totally recommend this beauty, you wont regret it if you give it a chance!"
+        },
+        {
+          "user_nick": "John Appleseed",
+          "comment_text": "It was great to see you again earlier. Lets definitely wrap a cup of coffee anytime soon, congrats!"
+        },
+        {
+          "user_nick": "Susan Collins",
+          "comment_text": "Tremendus book! It was amazing, totally recommend this beauty, you wont regret it if you give it a chance!"
+        },
+        {
+          "user_nick": "John Appleseed",
+          "comment_text": "It was great to see you again earlier. Lets definitely wrap a cup of coffee anytime soon, congrats!"
+        },
+        {
+          "user_nick": "Susan Collins",
+          "comment_text": "Tremendus book! It was amazing, totally recommend this beauty, you wont regret it if you give it a chance!"
+        }
+      ]
     },
     {
       "id": 3,

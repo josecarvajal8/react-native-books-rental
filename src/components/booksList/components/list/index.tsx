@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import { Book } from '..';
+import { Book } from '../../../commons';
 import getComponentStyle from '../../../../helpers/responsive';
 import { Card } from '../../../commons';
 import styles from './style';
@@ -14,6 +14,7 @@ const List = ({ books, action = () => null }: IList) => {
         <FlatList data={books}
             style={_styles.list}
             keyExtractor={(_, index) => index.toString()}
+            showsVerticalScrollIndicator={false}
             renderItem={({ item, index }) => {
                 const { title = '', author = '', image_url = '' } = { ...item }
                 return (<Card styles={_styles.cardStyle} key={index} action={() => action(item)}>

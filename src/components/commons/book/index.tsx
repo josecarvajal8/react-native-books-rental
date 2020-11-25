@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Text, View } from 'react-native';
-import getComponentStyle from '../../../../helpers/responsive';
+import getComponentStyle from '../../../helpers/responsive';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 interface IBook {

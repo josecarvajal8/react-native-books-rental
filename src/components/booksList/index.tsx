@@ -10,10 +10,6 @@ const BookList = (props: any) => {
     const { navigation = {} } = { ...props };
     return (
         <View style={_styles.container}>
-            {/* <Text>{'Hello Books Store'}</Text>
-            <TouchableHighlight onPress={() => navigation.navigate('Detail')}>
-                <Text>{'go to detail'}</Text>
-            </TouchableHighlight> */}
             <NavBar />
             <View style={_styles.containerList}>
                 <List books={mockBooks}
