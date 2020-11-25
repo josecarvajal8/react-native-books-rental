@@ -3,16 +3,27 @@ import { colors } from "../../config/constants";
 const styles = {
     container: {
         flex: 1,
-        alignItems: 'center',
         backgroundColor: colors.grey_bg
     },
     detailBook: {
         height: 300,
+        marginTop: 20,
+        marginLeft: 18
+    },
+    commentsContainer: {
+        maxHeight: 300,
+        minHeight: 200,
+        marginTop: 20,
+        marginLeft: 18
+    },
+    containerSuggestions: {
         marginTop: 20
     },
-    commentsContainer:{
-        height: 300,
-        marginTop: 20
+    commentsContainerHeight: {
+        minHeight: 260,
+    },
+    containerCommentsList: {
+        height: 180
     },
     bookInfoContainer: {
         flexDirection: 'row'
@@ -27,7 +38,7 @@ const styles = {
         marginLeft: 20,
         marginTop: 20
     },
-    btnsContinaer:{
+    btnsContinaer: {
         marginLeft: 30
     },
     btnAddWishList: {
@@ -42,6 +53,10 @@ const styles = {
         width: 300,
         height: 40,
         marginTop: 15
+    },
+    btnViewAll: {
+        marginTop: 20,
+        marginLeft: 80,
     }
 };
 export default styles;
