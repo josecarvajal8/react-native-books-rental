@@ -1,2 +1,3 @@
 import List from './list';
-export {  List };
+import NavBarContain from './navbarContain';
+export { List, NavBarContain };
