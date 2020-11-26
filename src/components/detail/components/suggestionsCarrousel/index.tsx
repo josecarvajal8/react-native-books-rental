@@ -6,9 +6,10 @@ import { Book, Card } from '../../../commons';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 interface ISuggestionsCarrousel {
-    data: Array<any>
+    data: Array<any>;
+    onDetailSuggest: Function;
 }
-const SuggestionsCarrousel = ({ data }: ISuggestionsCarrousel) => {
+const SuggestionsCarrousel = ({ data, onDetailSuggest }: ISuggestionsCarrousel) => {
     return (
         <FlatList data={data}
             horizontal={true}
@@ -17,7 +18,7 @@ const SuggestionsCarrousel = ({ data }: ISuggestionsCarrousel) => {
             renderItem={({ item }) => {
                 const { image_url = '' } = { ...item }
                 return (
-                    <Card styles={_styles.cardStyle}>
+                    <Card styles={_styles.cardStyle} action={() => onDetailSuggest(item)}>
                         <Image style={_styles.imageBook} resizeMode={'center'} source={{ uri: image_url }} />
                     </Card>
                 )
