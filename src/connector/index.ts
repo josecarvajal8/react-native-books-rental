@@ -5,7 +5,10 @@ interface IRequest {
     body?: { [key: string]: any }
 
 }
-class ConnectorProvider {
+interface IConnector {
+    generateRequest: (payload: IRequest) => Promise<any>
+}
+class ConnectorProvider implements IConnector {
     private static instance: ConnectorProvider
     private constructor() { }
     static getInstance(): ConnectorProvider {
@@ -14,14 +17,12 @@ class ConnectorProvider {
         }
         return ConnectorProvider.instance;
     }
-    generateRequest(payload: IRequest) {
-        const { headers, method, url, body = {} } = payload;
+    generateRequest(payload: IRequest): Promise<any> {
+        const { url } = payload;
         return new Promise(async (resolve, reject) => {
             try {
                 const res: any = await fetch(url, {
-                    method,
-                    headers,
-                    body
+                    ...payload
                 });
                 const data: any = await res.json();
                 resolve(data);
