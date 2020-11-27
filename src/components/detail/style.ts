@@ -58,6 +58,9 @@ const styles = {
     btnViewAll: {
         marginTop: 20,
         marginLeft: 80,
+    },
+    activityIndicator:{
+        marginTop: 20
     }
 };
 export default styles;
