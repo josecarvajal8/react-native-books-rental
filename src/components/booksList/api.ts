@@ -1,5 +1,5 @@
 
-import { FETCH_BOOKS_FAILURE, FETCH_BOOKS_SUCCESS } from "../../core/context/flux/types"
+import { FETCH_BOOKS_FAILURE, FETCH_BOOKS_SUCCESS } from "../../context/flux/types"
 
 export const FETCH_BOOKS = {
         url: 'https://my-json-server.typicode.com/josecarvajal8/fake-rest/books',

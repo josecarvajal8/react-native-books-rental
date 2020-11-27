@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { mockBooks } from '../../config/constants';
-import { ConnectorManager } from '../../connector';
-import { FETCH_DATA } from '../../core/context/flux/types';
+import { FETCH_DATA } from '../../context/flux/types';
 import getComponentStyle from '../../helpers/responsive';
 import { useAppContext } from '../../hooks';
 import { NavBar } from '../commons';

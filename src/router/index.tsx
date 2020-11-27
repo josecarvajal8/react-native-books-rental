@@ -21,8 +21,8 @@ const Router = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name={'Home'} component={renderRoutesTab} options={{ headerShown: false }} />
                 {renderRoutesStack}
+                <Stack.Screen name={'Home'} component={renderRoutesTab} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

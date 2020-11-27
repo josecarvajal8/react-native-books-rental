@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Image, Text, View, ScrollView, ActivityIndicator } from 'react-native';
-import { colors, mockBooks } from '../../config/constants';
-import { FETCH_DATA } from '../../core/context/flux/types';
+import { colors } from '../../config/constants';
+import { FETCH_DATA } from '../../context/flux/types';
 import getComponentStyle from '../../helpers/responsive';
 import utilities from '../../helpers/utilities';
 import { useAppContext } from '../../hooks';
