@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render pickerField component correctly 1`] = `
+<View
+  forwardedRef={[Function]}
+  style={
+    Object {
+      "borderColor": "#626565",
+      "borderRadius": 108.69565217391305,
+      "borderWidth": 3.6231884057971016,
+      "height": 74.44196428571429,
+      "width": 543.4782608695652,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "marginLeft": 18.115942028985508,
+        "marginTop": 14.888392857142858,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      test_field
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 14.888392857142858,
+        "marginTop": 14.888392857142858,
+      }
+    }
+  />
+</View>
+`;

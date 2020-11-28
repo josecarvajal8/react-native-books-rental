@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render form component correctly 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "marginBottom": 44.66517857142858,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Name"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#626565",
+          "borderRadius": 108.69565217391305,
+          "borderWidth": 3.6231884057971016,
+          "height": 66.99776785714286,
+          "padding": 10,
+          "paddingHorizontal": 18.115942028985508,
+          "paddingVertical": 14.888392857142858,
+          "width": 543.4782608695652,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 44.66517857142858,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Lastname"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#626565",
+          "borderRadius": 108.69565217391305,
+          "borderWidth": 3.6231884057971016,
+          "height": 66.99776785714286,
+          "padding": 10,
+          "paddingHorizontal": 18.115942028985508,
+          "paddingVertical": 14.888392857142858,
+          "width": 543.4782608695652,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 44.66517857142858,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Mail"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#626565",
+          "borderRadius": 108.69565217391305,
+          "borderWidth": 3.6231884057971016,
+          "height": 66.99776785714286,
+          "padding": 10,
+          "paddingHorizontal": 18.115942028985508,
+          "paddingVertical": 14.888392857142858,
+          "width": 543.4782608695652,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 44.66517857142858,
+      }
+    }
+  >
+    <View
+      forwardedRef={[Function]}
+      style={
+        Object {
+          "borderColor": "#626565",
+          "borderRadius": 108.69565217391305,
+          "borderWidth": 3.6231884057971016,
+          "height": 74.44196428571429,
+          "width": 543.4782608695652,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "marginLeft": 18.115942028985508,
+            "marginTop": 14.888392857142858,
+            "opacity": 1,
+          }
+        }
+      >
+        <Text>
+          Ages
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 14.888392857142858,
+            "marginTop": 14.888392857142858,
+          }
+        }
+      />
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 44.66517857142858,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 10,
+          "paddingHorizontal": 18.115942028985508,
+          "paddingVertical": 14.888392857142858,
+        }
+      }
+    >
+      <RNGestureHandlerButton
+        collapsable={false}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+      >
+        <View
+          accessible={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderWidth": 1.8115942028985508,
+              "height": 26.799107142857146,
+              "justifyContent": "center",
+              "marginRight": 18.115942028985508,
+              "opacity": 1,
+              "width": 32.608695652173914,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#ffffff",
+                "height": 17.86607142857143,
+                "width": 21.73913043478261,
+              }
+            }
+          />
+        </View>
+      </RNGestureHandlerButton>
+      <Text>
+        Terms and conditions
+      </Text>
+    </View>
+  </View>,
+  <RNGestureHandlerButton
+    collapsable={false}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
+  >
+    <View
+      accessible={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#0baee6",
+          "borderRadius": 54.34782608695652,
+          "height": 66.99776785714286,
+          "justifyContent": "center",
+          "opacity": 0.3,
+          "width": 362.3188405797101,
+        }
+      }
+    >
+      <Text>
+        Login
+      </Text>
+    </View>
+  </RNGestureHandlerButton>,
+]
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render textField component correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  editable={true}
+  onBlur={[Function]}
+  onChangeText={null}
+  onFocus={[Function]}
+  placeholder="test_field"
+  rejectResponderTermination={true}
+  style={
+    Object {
+      "borderColor": "#626565",
+      "borderRadius": 108.69565217391305,
+      "borderWidth": 3.6231884057971016,
+      "height": 66.99776785714286,
+      "padding": 10,
+      "paddingHorizontal": 18.115942028985508,
+      "paddingVertical": 14.888392857142858,
+      "width": 543.4782608695652,
+    }
+  }
+  underlineColorAndroid="transparent"
+/>
+`;

@@ -5,7 +5,7 @@ const mockProps = {
     books: [],
     action: () => null
 }
-test('Render booksList component correctly', () => {
-    const bookListCmp = renderer.create(<List {...mockProps} />).toJSON();
-    expect(bookListCmp).toMatchSnapshot();
+test('Render List component correctly', () => {
+    const listCmp = renderer.create(<List {...mockProps} />).toJSON();
+    expect(listCmp).toMatchSnapshot();
 })

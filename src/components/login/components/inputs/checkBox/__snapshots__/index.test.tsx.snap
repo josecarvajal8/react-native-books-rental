@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render checkBox component correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "padding": 10,
+      "paddingHorizontal": 18.115942028985508,
+      "paddingVertical": 14.888392857142858,
+    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
+  >
+    <View
+      accessible={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderWidth": 1.8115942028985508,
+          "height": 26.799107142857146,
+          "justifyContent": "center",
+          "marginRight": 18.115942028985508,
+          "opacity": 1,
+          "width": 32.608695652173914,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "height": 17.86607142857143,
+            "width": 21.73913043478261,
+          }
+        }
+      />
+    </View>
+  </RNGestureHandlerButton>
+  <Text>
+    test_field
+  </Text>
+</View>
+`;

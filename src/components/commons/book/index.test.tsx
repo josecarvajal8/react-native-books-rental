@@ -6,7 +6,7 @@ const mockProps = {
     title: 'The GitHub Journey',
     img: 'http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg'
 }
-test('Render booksList component correctly', () => {
-    const bookListCmp = renderer.create(<Book {...mockProps} />).toJSON();
-    expect(bookListCmp).toMatchSnapshot();
-})
+test('Render Book component correctly', () => {
+    const BookCmp = renderer.create(<Book {...mockProps} />).toJSON();
+    expect(BookCmp).toMatchSnapshot();
+});

@@ -5,7 +5,7 @@ const mockProps = {
     searchValue: '',
     onChangeSearchValue: () => null
 }
-test('Render booksList component correctly', () => {
-    const bookListCmp = renderer.create(<NavBarContain  {...mockProps} />).toJSON();
-    expect(bookListCmp).toMatchSnapshot();
+test('Render NavBarContain component correctly', () => {
+    const NavBarContainCmp = renderer.create(<NavBarContain  {...mockProps} />).toJSON();
+    expect(NavBarContainCmp).toMatchSnapshot();
 })

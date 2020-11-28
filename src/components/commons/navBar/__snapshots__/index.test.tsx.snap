@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render booksList component correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "height": 148.88392857142858,
+      "width": 750,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+      }
+    }
+    style={
+      Object {
+        "height": 297.76785714285717,
+        "position": "absolute",
+        "top": -66.99776785714286,
+        "width": 753.6231884057971,
+      }
+    }
+  />
+</RCTSafeAreaView>
+`;
+
+exports[`Render navBar component correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "height": 148.88392857142858,
+      "width": 750,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+      }
+    }
+    style={
+      Object {
+        "height": 297.76785714285717,
+        "position": "absolute",
+        "top": -66.99776785714286,
+        "width": 753.6231884057971,
+      }
+    }
+  />
+</RCTSafeAreaView>
+`;
