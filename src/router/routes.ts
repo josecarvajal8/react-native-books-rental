@@ -7,7 +7,8 @@ import SettingsScreen from "../components/settings";
 export interface IRoute {
     name: string;
     component: (props: any) => JSX.Element;
-    options?: any
+    options?: any,
+    icon?: string
 }
 export const routes_stack: IRoute[] = [
     {
@@ -21,7 +22,11 @@ export const routes_stack: IRoute[] = [
         options: { title: 'Detail', headerShown: false }
     }
 ];
-
+export const tabsIcons: { [key: string]: string } = {
+    ['Library']: 'book',
+    ['WishList']: 'star-o',
+    ['Settings']: 'gear'
+}
 export const routes_tab: IRoute[] = [
     {
         name: 'Library',

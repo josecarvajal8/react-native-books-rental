@@ -15,8 +15,8 @@ const Book = ({ title, author, img }: IBook) => {
                 resizeMode={'contain'}
                 source={{ uri: img }} />
             <View style={_styles.infoContainer}>
-                <Text>{title}</Text>
-                <Text>{author}</Text>
+                <Text style={_styles.bookTitle}>{title}</Text>
+                <Text style={_styles.bookAuthor}>{author}</Text>
             </View>
         </View>
     );

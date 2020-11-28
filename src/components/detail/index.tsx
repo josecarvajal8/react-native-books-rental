@@ -9,7 +9,7 @@ import { useAppContext } from '../../hooks';
 import { Buttons, Card, NavBar } from '../commons';
 import BaseContainNavBar from '../commons/baseContainNavBar';
 import { FETCH_SUGGESTIONS } from './api';
-import { CommentsList, SuggestionsCarrousel } from './components';
+import { Comment, SuggestionsCarrousel } from './components';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 const getSuggestions = async (dispatch: any, genre: string) => {
@@ -20,6 +20,14 @@ const getSuggestions = async (dispatch: any, genre: string) => {
 }
 const eventsHandler =
     async (eventName: string, properties: any) => await MetricsManager.onLogEvent(eventName, properties);
+
+const renderPreviewComments = (comments: Array<any>) => {
+    return (comments.map((el, index: number) => {
+        const { comment_text = '', user_nick = '' } = { ...el };
+        return index < 2 ? <Comment key={index} commentText={comment_text} userName={user_nick} /> : null
+    }
+    ));
+}
 
 const Detail = (props: any) => {
     const [state, dispatch] = useAppContext();
@@ -39,7 +47,7 @@ const Detail = (props: any) => {
     return (
         <ScrollView style={_styles.container} bounces={false}>
             <NavBar key={'navbar'} >
-                <BaseContainNavBar title={'DETAIL'} onBack={() => navigation.goBack()} />
+                <BaseContainNavBar title={'Detail'} onBack={() => navigation.goBack()} />
             </NavBar>
             <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
                 <View style={_styles.bookInfoContainer}>
@@ -47,20 +55,20 @@ const Detail = (props: any) => {
                         resizeMode={'contain'}
                         source={{ uri: image_url }} />
                     <View style={_styles.containerTextDetail}>
-                        <Text>{title}</Text>
-                        <Text>{author}</Text>
-                        <Text>{year}</Text>
-                        <Text>{genre}</Text>
+                        <Text style={_styles.titleText}>{title}</Text>
+                        <Text style={_styles.infoText}>{author}</Text>
+                        <Text style={_styles.infoText}>{year}</Text>
+                        <Text style={_styles.infoText}>{genre}</Text>
                     </View>
                 </View>
                 <View style={_styles.btnsContinaer}>
                     <Buttons.Raised styles={_styles.btnAddWishList}
                         action={() => console.log('hello add')}>
-                        <Text>{'ADD TO WISHLIST'}</Text>
+                        <Text style={_styles.textAdd}>{'ADD TO WISHLIST'}</Text>
                     </Buttons.Raised>
                     <Buttons.Raised styles={_styles.btnRent}
                         action={() => console.log('hello rent')}>
-                        <Text>{'RENT'}</Text>
+                        <Text style={_styles.textRent}>{'RENT'}</Text>
                     </Buttons.Raised>
                 </View>
             </Card>
@@ -77,11 +85,9 @@ const Detail = (props: any) => {
                     { ..._styles.commentsContainer, ..._styles.commentsContainerHeight }
                     : _styles.commentsContainer}
                 touchable={false}>
-                <View style={_styles.containerCommentsList}>
-                    <CommentsList data={comments} renderElementsAmount={renderCommentsAmount} scrollable={false} />
-                </View>
+                {renderPreviewComments(comments)}
                 {showViewAll && <Buttons.Flat action={() => console.log('view all')} styles={_styles.btnViewAll}>
-                    <Text>{'View All'}</Text>
+                    <Text style={_styles.textViewAll}>{'View All'}</Text>
                 </Buttons.Flat>}
             </Card>}
         </ScrollView>

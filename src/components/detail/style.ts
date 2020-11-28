@@ -1,4 +1,4 @@
-import { colors } from "../../config/constants";
+import { colors, fonts } from "../../config/constants";
 
 const styles = {
     container: {
@@ -11,8 +11,7 @@ const styles = {
         marginLeft: 18
     },
     commentsContainer: {
-        maxHeight: 300,
-        minHeight: 200,
+        height: 250,
         marginTop: 20,
         marginLeft: 18
     },
@@ -21,7 +20,7 @@ const styles = {
         height: 150
     },
     commentsContainerHeight: {
-        minHeight: 260,
+        minHeight: 300,
     },
     containerCommentsList: {
         height: 180
@@ -59,8 +58,34 @@ const styles = {
         marginTop: 20,
         marginLeft: 80,
     },
-    activityIndicator:{
+    activityIndicator: {
         marginTop: 20
+    },
+    titleText: {
+        fontFamily: fonts.SEMIBOLD,
+        fontSize: 20,
+        color: colors.black
+    },
+    infoText: {
+        fontFamily: fonts.REGULAR,
+        fontSize: 15,
+        color: colors.gey_input,
+        marginTop: 2
+    },
+    textAdd: {
+        fontFamily: fonts.SEMIBOLD,
+        fontSize: 18,
+        color: colors.primary
+    },
+    textRent: {
+        fontFamily: fonts.SEMIBOLD,
+        fontSize: 18,
+        color: colors.white
+    },
+    textViewAll: {
+        fontFamily: fonts.REGULAR,
+        fontSize: 15,
+        color: colors.primary
     }
 };
 export default styles;

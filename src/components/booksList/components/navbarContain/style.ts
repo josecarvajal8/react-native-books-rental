@@ -1,10 +1,11 @@
-import { colors } from "../../../../config/constants";
+import { colors, fonts } from "../../../../config/constants";
 
 const styles = {
     containerNavBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 5
+        marginTop: 5,
+        paddingHorizontal: 20
     },
     searchBarNavBar: {
         flexDirection: 'row',
@@ -32,23 +33,35 @@ const styles = {
     searchBtnIn: {
         width: 20,
         height: 20,
-        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    backBtn: {
+    navBarBtn: {
         width: 20,
-        height: 20,
-        borderWidth: 1,
-        marginLeft: 20
-    },
-    searchBtn: {
-        width: 20,
-        height: 20,
-        borderWidth: 1,
-        marginRight: 20
+        height: 20
     },
     cancelBtn: {
         marginRight: 20,
         marginTop: 5
+    },
+    title: {
+        fontFamily: fonts.BOLD,
+        fontSize: 25,
+        lineHeight: 0,
+        color: colors.white
+    },
+    searchIcon: {
+        color: colors.white,
+        size: 20
+    },
+    closeIcon: {
+        color: colors.gey_input,
+        size: 20
+    },
+    cancelText: {
+        fontFamily: fonts.SEMIBOLD,
+        fontSize: 18,
+        color: colors.white
     }
 }
 export default styles;

@@ -13,7 +13,7 @@ const Comment = ({ userName = '', commentText = '' }: IComment) => {
         <View style={_styles.container}>
             <Image source={profileImg} style={_styles.img} />
             <View style={_styles.containerInfo}>
-                <Text>
+                <Text style={_styles.userName}>
                     {userName}
                 </Text>
                 <Text style={_styles.commentText} numberOfLines={4}>

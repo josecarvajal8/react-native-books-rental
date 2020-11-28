@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, TextInput } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import getComponentStyle from '../../../../helpers/responsive';
 import styles from './style';
 const _styles = getComponentStyle(styles);
@@ -13,11 +14,15 @@ const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain
         return (
             <View
                 style={_styles.containerNavBar}>
-                <TouchableOpacity style={_styles.backBtn}></TouchableOpacity>
-                <Text>{'LIBRARY'}</Text>
-                <TouchableOpacity style={_styles.searchBtn}
-                    onPress={() => setShowSearchBar(!showSearchBar)}></TouchableOpacity>
-            </View>
+                <TouchableOpacity style={_styles.navBarBtn}>
+                    <FontAwesome name={'bell'} {..._styles.searchIcon} />
+                </TouchableOpacity>
+                <Text style={_styles.title}>{'Library'}</Text>
+                <TouchableOpacity style={_styles.navBarBtn}
+                    onPress={() => setShowSearchBar(!showSearchBar)}>
+                    <FontAwesome name={'search'} {..._styles.searchIcon} />
+                </TouchableOpacity>
+            </View >
         )
     }
 
@@ -31,11 +36,13 @@ const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain
                         onChangeText={(text) =>
                             onChangeSearchValue(text)}
                         style={_styles.textField} />
-                    <TouchableOpacity style={_styles.searchBtnIn} onPress={() => onChangeSearchValue('')} />
+                    <TouchableOpacity style={_styles.searchBtnIn} onPress={() => onChangeSearchValue('')} >
+                    <FontAwesome name={'close'} {..._styles.closeIcon} />
+                    </TouchableOpacity>
                 </View>
                 <TouchableOpacity style={_styles.cancelBtn}
                     onPress={() => setShowSearchBar(!showSearchBar)}>
-                    <Text>{'CANCEL'}</Text>
+                    <Text style={_styles.cancelText}>{'Cancel'}</Text>
                 </TouchableOpacity>
             </View>
         )
