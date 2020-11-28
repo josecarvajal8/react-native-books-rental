@@ -18,15 +18,15 @@ const getSuggestions = async (dispatch: any, genre: string) => {
         payload: { request: FETCH_SUGGESTIONS(genre), dispatch }
     })
 }
-const eventsHandler = async (eventName: string, properties: any) => {
-    await MetricsManager.onLogEvent(eventName, properties)
-}
+const eventsHandler =
+    async (eventName: string, properties: any) => await MetricsManager.onLogEvent(eventName, properties);
+
 const Detail = (props: any) => {
     const [state, dispatch] = useAppContext();
     const { route: { params = {} } = {}, navigation } = props;
     const { author = '', title = '', genre = '', year = '', image_url = '', comments = [], id = 0 } = { ...params };
     useEffect(() => {
-        eventsHandler('detail-book', { title, author, id });
+        eventsHandler('detailBook', { title, author, id });
         getSuggestions(dispatch, genre);
     }, [])
     const { suggestions: _suggestions = [], loading = false } = { ...state };

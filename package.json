@@ -14,11 +14,11 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-firebase/analytics": "^10.0.0",
+    "@react-native-firebase/app": "^10.0.0",
     "@react-navigation/bottom-tabs": "^5.9.2",
     "@react-navigation/native": "^5.8.9",
     "@react-navigation/stack": "^5.9.3",
-    "@react-native-firebase/analytics": "^10.0.0",
-    "@react-native-firebase/app": "^10.0.0",
     "formik": "^2.2.5",
     "i18n-js": "^3.8.0",
     "react": "16.13.1",
@@ -39,6 +39,7 @@
     "@types/jest": "^25.2.3",
     "@types/react-native": "^0.63.2",
     "@types/react-native-base64": "^0.1.0",
+    "@types/react-test-renderer": "^17.0.0",
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
@@ -47,6 +48,17 @@
     "typescript": "^3.8.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "setupFiles": [
+      "./jest/setup.js"
+    ]
   }
 }

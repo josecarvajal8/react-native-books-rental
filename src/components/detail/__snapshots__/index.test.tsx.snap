@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render booksList component correctly 1`] = `
+<RCTScrollView
+  bounces={false}
+  style={
+    Object {
+      "backgroundColor": "#dee7ea",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      style={
+        Object {
+          "height": 148.88392857142858,
+          "width": 750,
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+          }
+        }
+        style={
+          Object {
+            "height": 297.76785714285717,
+            "position": "absolute",
+            "top": -66.99776785714286,
+            "width": 753.6231884057971,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 7.444196428571429,
+          }
+        }
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "borderWidth": 1.8115942028985508,
+                "height": 29.776785714285715,
+                "marginLeft": 36.231884057971016,
+                "opacity": 1,
+                "width": 36.231884057971016,
+              }
+            }
+          >
+            <View />
+          </View>
+        </RNGestureHandlerButton>
+        <Text
+          forwardedRef={[Function]}
+          style={
+            Object {
+              "marginLeft": 253.62318840579712,
+            }
+          }
+        >
+          DETAIL
+        </Text>
+      </View>
+    </RCTSafeAreaView>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 14.492753623188406,
+          "height": 446.6517857142857,
+          "marginLeft": 32.608695652173914,
+          "marginTop": 29.776785714285715,
+          "shadowColor": "rgba(46, 48, 48, 1)",
+          "shadowOffset": Object {
+            "height": 1.4888392857142858,
+            "width": 1.8115942028985508,
+          },
+          "shadowOpacity": 0.3,
+          "shadowRadius": 2,
+          "width": 688.4057971014493,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "uri": "",
+            }
+          }
+          style={
+            Object {
+              "height": 193.54910714285717,
+              "marginLeft": 54.34782608695652,
+              "marginTop": 29.776785714285715,
+              "width": 181.15942028985506,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 36.231884057971016,
+              "marginTop": 29.776785714285715,
+            }
+          }
+        >
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginLeft": 54.34782608695652,
+          }
+        }
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ffffff",
+                "borderColor": "#0baee6",
+                "borderRadius": 54.34782608695652,
+                "borderWidth": 1.8115942028985508,
+                "height": 59.55357142857143,
+                "justifyContent": "center",
+                "marginTop": 44.66517857142858,
+                "opacity": 1,
+                "width": 543.4782608695652,
+              }
+            }
+          >
+            <Text>
+              ADD TO WISHLIST
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#0baee6",
+                "borderRadius": 54.34782608695652,
+                "height": 59.55357142857143,
+                "justifyContent": "center",
+                "marginTop": 22.33258928571429,
+                "opacity": 1,
+                "width": 543.4782608695652,
+              }
+            }
+          >
+            <Text>
+              RENT
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Render detail component correctly 1`] = `
+<RCTScrollView
+  bounces={false}
+  style={
+    Object {
+      "backgroundColor": "#dee7ea",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      style={
+        Object {
+          "height": 148.88392857142858,
+          "width": 750,
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+          }
+        }
+        style={
+          Object {
+            "height": 297.76785714285717,
+            "position": "absolute",
+            "top": -66.99776785714286,
+            "width": 753.6231884057971,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 7.444196428571429,
+          }
+        }
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "borderWidth": 1.8115942028985508,
+                "height": 29.776785714285715,
+                "marginLeft": 36.231884057971016,
+                "opacity": 1,
+                "width": 36.231884057971016,
+              }
+            }
+          >
+            <View />
+          </View>
+        </RNGestureHandlerButton>
+        <Text
+          forwardedRef={[Function]}
+          style={
+            Object {
+              "marginLeft": 253.62318840579712,
+            }
+          }
+        >
+          DETAIL
+        </Text>
+      </View>
+    </RCTSafeAreaView>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 14.492753623188406,
+          "height": 446.6517857142857,
+          "marginLeft": 32.608695652173914,
+          "marginTop": 29.776785714285715,
+          "shadowColor": "rgba(46, 48, 48, 1)",
+          "shadowOffset": Object {
+            "height": 1.4888392857142858,
+            "width": 1.8115942028985508,
+          },
+          "shadowOpacity": 0.3,
+          "shadowRadius": 2,
+          "width": 688.4057971014493,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "uri": "",
+            }
+          }
+          style={
+            Object {
+              "height": 193.54910714285717,
+              "marginLeft": 54.34782608695652,
+              "marginTop": 29.776785714285715,
+              "width": 181.15942028985506,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 36.231884057971016,
+              "marginTop": 29.776785714285715,
+            }
+          }
+        >
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+          <Text>
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginLeft": 54.34782608695652,
+          }
+        }
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ffffff",
+                "borderColor": "#0baee6",
+                "borderRadius": 54.34782608695652,
+                "borderWidth": 1.8115942028985508,
+                "height": 59.55357142857143,
+                "justifyContent": "center",
+                "marginTop": 44.66517857142858,
+                "opacity": 1,
+                "width": 543.4782608695652,
+              }
+            }
+          >
+            <Text>
+              ADD TO WISHLIST
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+        <RNGestureHandlerButton
+          collapsable={false}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessible={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#0baee6",
+                "borderRadius": 54.34782608695652,
+                "height": 59.55357142857143,
+                "justifyContent": "center",
+                "marginTop": 22.33258928571429,
+                "opacity": 1,
+                "width": 543.4782608695652,
+              }
+            }
+          >
+            <Text>
+              RENT
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
