@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Image, Text, View, ScrollView, ActivityIndicator } from 'react-native';
 import { colors } from '../../config/constants';
 import { FETCH_DATA } from '../../context/flux/types';
+import { MetricsManager } from '../../core/metrics';
 import getComponentStyle from '../../helpers/responsive';
 import utilities from '../../helpers/utilities';
 import { useAppContext } from '../../hooks';
@@ -17,13 +18,16 @@ const getSuggestions = async (dispatch: any, genre: string) => {
         payload: { request: FETCH_SUGGESTIONS(genre), dispatch }
     })
 }
-
+const eventsHandler = async (eventName: string, properties: any) => {
+    await MetricsManager.onLogEvent(eventName, properties)
+}
 const Detail = (props: any) => {
     const [state, dispatch] = useAppContext();
     const { route: { params = {} } = {}, navigation } = props;
     const { author = '', title = '', genre = '', year = '', image_url = '', comments = [], id = 0 } = { ...params };
     useEffect(() => {
-        getSuggestions(dispatch, genre)
+        eventsHandler('detail-book', { title, author, id });
+        getSuggestions(dispatch, genre);
     }, [])
     const { suggestions: _suggestions = [], loading = false } = { ...state };
     const suggestions: Array<any> = _suggestions.filter((el: any) => {
