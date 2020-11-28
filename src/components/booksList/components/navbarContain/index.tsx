@@ -14,38 +14,38 @@ const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain
             <View
                 style={_styles.containerNavBar}>
                 <TouchableOpacity style={_styles.backBtn}></TouchableOpacity>
-                <Text>{'LIBRARY'}</Text>
+                <Text style={_styles.title}>{'Library'}</Text>
                 <TouchableOpacity style={_styles.searchBtn}
                     onPress={() => setShowSearchBar(!showSearchBar)}></TouchableOpacity>
-            </View>
+            </View >
         )
     }
 
-    const renderSearchBar = () => {
-        return (
-            <View
-                style={_styles.searchBarNavBar}>
-                <View style={_styles.searchBar}>
-                    <TextInput
-                        value={searchValue}
-                        onChangeText={(text) =>
-                            onChangeSearchValue(text)}
-                        style={_styles.textField} />
-                    <TouchableOpacity style={_styles.searchBtnIn} onPress={() => onChangeSearchValue('')} />
-                </View>
-                <TouchableOpacity style={_styles.cancelBtn}
-                    onPress={() => setShowSearchBar(!showSearchBar)}>
-                    <Text>{'CANCEL'}</Text>
-                </TouchableOpacity>
-            </View>
-        )
-    }
-
+const renderSearchBar = () => {
     return (
-        <>
-            {!showSearchBar && renderBaseContain()}
-            {showSearchBar && renderSearchBar()}
-        </>
+        <View
+            style={_styles.searchBarNavBar}>
+            <View style={_styles.searchBar}>
+                <TextInput
+                    value={searchValue}
+                    onChangeText={(text) =>
+                        onChangeSearchValue(text)}
+                    style={_styles.textField} />
+                <TouchableOpacity style={_styles.searchBtnIn} onPress={() => onChangeSearchValue('')} />
+            </View>
+            <TouchableOpacity style={_styles.cancelBtn}
+                onPress={() => setShowSearchBar(!showSearchBar)}>
+                <Text>{'CANCEL'}</Text>
+            </TouchableOpacity>
+        </View>
     )
+}
+
+return (
+    <>
+        {!showSearchBar && renderBaseContain()}
+        {showSearchBar && renderSearchBar()}
+    </>
+)
 }
 export default NavBarContain

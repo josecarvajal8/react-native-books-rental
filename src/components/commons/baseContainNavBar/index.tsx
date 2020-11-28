@@ -16,6 +16,7 @@ const BaseContainNavBar = ({ title = '', onBack }: IBaseContainNavBar) => {
                 onPress={() => onBack()}>
             </TouchableOpacity>
             <Text style={_styles.title}>{title}</Text>
+            <View style={_styles.nonVisibleBox} />
         </View>
     )
 }

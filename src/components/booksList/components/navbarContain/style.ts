@@ -1,4 +1,4 @@
-import { colors } from "../../../../config/constants";
+import { colors, fonts } from "../../../../config/constants";
 
 const styles = {
     containerNavBar: {
@@ -49,6 +49,12 @@ const styles = {
     cancelBtn: {
         marginRight: 20,
         marginTop: 5
+    },
+    title:{
+        fontFamily: fonts.BOLD,
+        fontSize: 25,
+        lineHeight: 0,
+        color: colors.white
     }
 }
 export default styles;

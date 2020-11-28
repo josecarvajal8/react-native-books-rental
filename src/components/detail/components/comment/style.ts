@@ -1,3 +1,5 @@
+import { colors, fonts } from "../../../../config/constants";
+
 const styles = {
     container: {
         flexDirection: 'row',
@@ -14,7 +16,15 @@ const styles = {
         marginLeft: 20
     },
     commentText:{
-        width: 240
+        fontFamily: fonts.REGULAR,
+        fontSize: 15,
+        width: 240,
+        marginTop: 3
+    },
+    userName:{
+        fontFamily: fonts.SEMIBOLD,
+        fontSize: 15,
+        color: colors.black
     }
 }
 export default styles;
