@@ -8,8 +8,9 @@ const getInitialScreen = async () => {
     const token = await utilities.getLocalData('token');
     return token ? 'Home' : 'Login';
 }
-const eventsHandler = async (eventName: string) =>{
-   await MetricsManager.onLogEvent(eventName)
+const eventsHandler = async (eventName: string) => {
+    await MetricsManager.onLogEvent(eventName)
+    await analytics().logEvent('appSessionStart')
 }
 
 const Root = () => {

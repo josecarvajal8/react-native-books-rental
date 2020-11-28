@@ -24,10 +24,9 @@ const eventsHandler =
 const renderPreviewComments = (comments: Array<any>) => {
     return (comments.map((el, index: number) => {
         const { comment_text = '', user_nick = '' } = { ...el };
-        return index < 2 ? <Comment commentText={comment_text} userName={user_nick} /> : null
+        return index < 2 ? <Comment key={index} commentText={comment_text} userName={user_nick} /> : null
     }
-
-    ))
+    ));
 }
 
 const Detail = (props: any) => {
@@ -86,7 +85,7 @@ const Detail = (props: any) => {
                     { ..._styles.commentsContainer, ..._styles.commentsContainerHeight }
                     : _styles.commentsContainer}
                 touchable={false}>
-                    {renderPreviewComments(comments)}
+                {renderPreviewComments(comments)}
                 {showViewAll && <Buttons.Flat action={() => console.log('view all')} styles={_styles.btnViewAll}>
                     <Text style={_styles.textViewAll}>{'View All'}</Text>
                 </Buttons.Flat>}

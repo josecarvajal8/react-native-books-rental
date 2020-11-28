@@ -11,7 +11,6 @@ const styles = {
     backBtn: {
         width: 20,
         height: 20,
-        borderWidth: 1,
     },
     title: {
         fontFamily: fonts.BOLD,
@@ -20,6 +19,10 @@ const styles = {
     },
     nonVisibleBox:{
         width: 20
+    },
+    backIcon:{
+        size: 20,
+        color: colors.white
     }
 }
 export default styles;
