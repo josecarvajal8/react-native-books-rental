@@ -1,9 +1,8 @@
-import { ConnectorManager } from "../../../../../connector"
+import { ConnectorManager } from "../../../../core/connector"
 
 const fetchRequest = (state: any, payload: any) => {
     const { request = {}, dispatch = null } = { ...payload };
     const loading = true;
-    console.log(payload)
     ConnectorManager.generateRequest({ ...request }).then(res =>
         dispatch({ type: request.success, payload: res })
     ).catch(err => dispatch({ type: request.failure, payload: err }));

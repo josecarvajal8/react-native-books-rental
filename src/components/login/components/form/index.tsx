@@ -9,7 +9,7 @@ import styles from './style';
 import { Buttons } from '../../../commons';
 import { IOption } from '../inputs/picker/index';
 interface IForm {
-    navigation: Function
+    onLogin: Function
 }
 interface ILogin {
     name: string;
@@ -101,7 +101,7 @@ const inputHandler =
         return handler[type];
     }
 
-const Form = ({ navigation }: IForm) => {
+const Form = ({ onLogin }: IForm) => {
     const initialFormErrors: { [key: string]: string } = {};
     const [formErrors, setFormErrors] = useState(initialFormErrors);
     const setErrors = (values: any, fieldId: string) => {
@@ -138,8 +138,7 @@ const Form = ({ navigation }: IForm) => {
         <Formik
             initialValues={formValues}
             onSubmit={values => {
-                console.log(values)
-                navigation();
+                onLogin(values)
             }}
         >
             {({ handleChange, handleBlur, handleSubmit, values, setFieldValue }: any) =>
