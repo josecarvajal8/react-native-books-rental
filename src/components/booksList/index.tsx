@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { FETCH_DATA } from '../../context/flux/types';
+import { LanguageManager } from '../../core/language';
 import getComponentStyle from '../../helpers/responsive';
 import { useAppContext } from '../../hooks';
 import { NavBar } from '../commons';

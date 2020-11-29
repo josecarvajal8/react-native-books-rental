@@ -1,0 +1,25 @@
+{
+    "titles": {
+        "library": "Libreria",
+        "wishlist": "Wishlist",
+        "settings": "Configuracion",
+        "detail": "Detalle",
+        "comments": "Comentarios"
+    },
+    "login": {
+        "login": "Ingresar",
+        "name": "Nombre",
+        "lastname": "Apellido",
+        "mail": "Correo",
+        "age": "Edad",
+        "terms": "Terminos y condiciones"
+    },
+    "detail": {
+        "addToWishList": "agregar a tu wishlist",
+        "rent": "alquilar",
+        "viewAll": "ver todos"
+    },
+    "global":{
+        "cancel": "Cancelar"
+    }
+}
