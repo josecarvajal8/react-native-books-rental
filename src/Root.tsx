@@ -4,7 +4,6 @@ import Context from './context';
 import utilities from './helpers/utilities';
 import { MetricsManager } from './core/metrics';
 import analytics from '@react-native-firebase/analytics';
-import { LanguageManager } from './core/language';
 const getInitialScreen = async () => {
     const token = await utilities.getLocalData('token');
     return token ? 'Home' : 'Login';
