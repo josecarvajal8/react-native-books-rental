@@ -3,9 +3,15 @@ const sesionPersistance = (state: any, payload: any = []) => {
         ...state, user: payload, loading: false
     }
 }
-const languageChange = (state:any, payload:any = []) => {
+const languageChange = (state: any, payload: any) => {
     return {
         ...state, locale: payload, loading: false
     }
 }
-export { sesionPersistance, languageChange };
+
+const wishListBooks = (state: any, payload: any) => {
+    return {
+        ...state, wishlist: payload, loading: false
+    }
+}
+export { sesionPersistance, languageChange, wishListBooks };

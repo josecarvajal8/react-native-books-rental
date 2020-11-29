@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { IRoute, routes_stack, routes_tab, tabsIcons } from './routes';
 import utilities from '../helpers/utilities';
 import { TokenizerManager } from '../core/tokenizer';
-import { LOGIN_PERSISTANCE } from '../context/flux/types';
+import { LOGIN_PERSISTANCE, WISH_LIST_UPDATE } from '../context/flux/types';
 import { useAppContext } from '../hooks';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -17,6 +17,10 @@ const handleTokenSesion = async (dispatch: any) => {
         const decodeData = TokenizerManager.decodeToken(token) || {};
         dispatch({ type: LOGIN_PERSISTANCE, payload: { ...decodeData, token } })
     }
+}
+const wishListSetup = async (dispatch: any) => {
+    const wishlist = await utilities.getLocalData('wishlist') || [];
+    dispatch({ type: WISH_LIST_UPDATE, payload: wishlist });
 }
 const renderRoutesStack = routes_stack.map((route: IRoute, index: number) =>
     <Stack.Screen key={index} {...route} />
@@ -44,6 +48,7 @@ const Router = (props: any) => {
     const [state, dispatch] = useAppContext();
     useEffect(() => {
         handleTokenSesion(dispatch);
+        wishListSetup(dispatch);
     }, [])
     return (
         <NavigationContainer>

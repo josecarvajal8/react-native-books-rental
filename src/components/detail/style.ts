@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.grey_bg
@@ -26,7 +27,7 @@ const styles = {
         height: 180
     },
     bookInfoContainer: {
-        flexDirection: 'row'
+       flexDirection: 'row'
     },
     bookImg: {
         marginTop: 20,
@@ -87,5 +88,5 @@ const styles = {
         fontSize: 15,
         color: colors.primary
     }
-};
+});
 export default styles;

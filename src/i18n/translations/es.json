@@ -23,7 +23,9 @@
     "detail": {
         "addToWishList": "agregar a tu wishlist",
         "rent": "alquilar",
-        "viewAll": "ver todos"
+        "viewAll": "ver todos",
+        "bookAdded": "Libro agregado",
+        "addedToWishList": "El libro fue agregado a tu wishlist"
     },
     "global": {
         "cancel": "Cancelar",
@@ -32,6 +34,11 @@
         "english": "Ingles",
         "spanish": "Español",
         "years": "años",
-        "welcome": "Bienvenido"
+        "welcome": "Bienvenido",
+        "ok": "Entendido"
+    },
+    "errors":{
+        "default": {"title": "Oups", "message": "Parece que el equipo tiene trabajo, mejoraremos para ti"},
+        "alreadyInList": {"title": "Super estrella", "message":"¡Este libro ya se encuentra en tu lista!"}
     }
 }
