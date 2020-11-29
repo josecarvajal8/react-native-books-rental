@@ -12,11 +12,10 @@ const eventsHandler = async (eventName: string) => {
     await MetricsManager.onLogEvent(eventName)
     await analytics().logEvent('appSessionStart')
 }
-
 const Root = () => {
     let initialScreen;
     useEffect(() => {
-        initialScreen = getInitialScreen()
+        initialScreen = getInitialScreen();
         eventsHandler('appSession');
     }, []);
     return (

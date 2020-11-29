@@ -45,7 +45,6 @@ const Router = (props: any) => {
     useEffect(() => {
         handleTokenSesion(dispatch);
     }, [])
-    const { user = {} } = { ...state }
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName={initialScreen}>

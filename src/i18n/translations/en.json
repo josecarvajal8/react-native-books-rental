@@ -1,0 +1,25 @@
+{
+    "titles": {
+        "library": "Library",
+        "wishlist": "Wishlist",
+        "settings": "Settings",
+        "detail": "Detail",
+        "comments": "Comments"
+    },
+    "login": {
+        "login": "Login",
+        "name": "Name",
+        "lastname": "Lastname",
+        "mail": "Email",
+        "age": "Age",
+        "terms": "Terms and conditions"
+    },
+    "detail": {
+        "addToWishList": "add to wishlist",
+        "rent": "rent",
+        "viewAll": "View All"
+    },
+    "global":{
+        "cancel": "Cancel"
+    }
+}

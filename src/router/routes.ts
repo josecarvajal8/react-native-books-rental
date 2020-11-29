@@ -3,7 +3,9 @@ import BookList from "../components/booksList";
 import Login from "../components/login";
 import WishList from "../components/wishList";
 import SettingsScreen from "../components/settings";
-
+import I18n from 'i18n-js';
+import { setI18nConfig } from "../i18n";
+setI18nConfig();
 export interface IRoute {
     name: string;
     component: (props: any) => JSX.Element;
@@ -19,7 +21,7 @@ export const routes_stack: IRoute[] = [
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Detail', headerShown: false }
+        options: { title: I18n.t('titles.detail'), headerShown: false }
     }
 ];
 export const tabsIcons: { [key: string]: string } = {
@@ -31,16 +33,16 @@ export const routes_tab: IRoute[] = [
     {
         name: 'Library',
         component: BookList,
-        options: { title: 'Library', headerShown: false, tabBarVisible: true }
+        options: { title: I18n.t('titles.library'), headerShown: false, tabBarVisible: true }
     },
     {
         name: 'WishList',
         component: WishList,
-        options: { title: 'WishList', headerShown: false, tabBarVisible: true }
+        options: { title: I18n.t('titles.wishlist'), headerShown: false, tabBarVisible: true }
     },
     {
         name: 'Settings',
         component: SettingsScreen,
-        options: { title: 'Settings', headerShown: false, tabBarVisible: true }
+        options: { title: I18n.t('titles.settings'), headerShown: false, tabBarVisible: true }
     }
 ];

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, TextInput } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import getComponentStyle from '../../../../helpers/responsive';
+import I18n from 'i18n-js';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 interface INavBarContain {
@@ -17,7 +18,7 @@ const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain
                 <TouchableOpacity style={_styles.navBarBtn}>
                     <FontAwesome name={'bell'} {..._styles.searchIcon} />
                 </TouchableOpacity>
-                <Text style={_styles.title}>{'Library'}</Text>
+                <Text style={_styles.title}>{I18n.t('titles.library')}</Text>
                 <TouchableOpacity style={_styles.navBarBtn}
                     onPress={() => setShowSearchBar(!showSearchBar)}>
                     <FontAwesome name={'search'} {..._styles.searchIcon} />
@@ -42,7 +43,7 @@ const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain
                 </View>
                 <TouchableOpacity style={_styles.cancelBtn}
                     onPress={() => setShowSearchBar(!showSearchBar)}>
-                    <Text style={_styles.cancelText}>{'Cancel'}</Text>
+                    <Text style={_styles.cancelText}>{I18n.t('global.cancel')}</Text>
                 </TouchableOpacity>
             </View>
         )

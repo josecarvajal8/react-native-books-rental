@@ -9,6 +9,7 @@ import { useAppContext } from '../../hooks';
 import { Buttons, Card, NavBar } from '../commons';
 import BaseContainNavBar from '../commons/baseContainNavBar';
 import { FETCH_SUGGESTIONS } from './api';
+import I18n from 'i18n-js';
 import { Comment, SuggestionsCarrousel } from './components';
 import styles from './style';
 const _styles = getComponentStyle(styles);
@@ -47,7 +48,7 @@ const Detail = (props: any) => {
     return (
         <ScrollView style={_styles.container} bounces={false}>
             <NavBar key={'navbar'} >
-                <BaseContainNavBar title={'Detail'} onBack={() => navigation.goBack()} />
+                <BaseContainNavBar title={I18n.t('titles.detail')} onBack={() => navigation.goBack()} />
             </NavBar>
             <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
                 <View style={_styles.bookInfoContainer}>
@@ -64,11 +65,11 @@ const Detail = (props: any) => {
                 <View style={_styles.btnsContinaer}>
                     <Buttons.Raised styles={_styles.btnAddWishList}
                         action={() => console.log('hello add')}>
-                        <Text style={_styles.textAdd}>{'ADD TO WISHLIST'}</Text>
+                        <Text style={_styles.textAdd}>{(I18n.t('detail.addToWishList')).toUpperCase()}</Text>
                     </Buttons.Raised>
                     <Buttons.Raised styles={_styles.btnRent}
                         action={() => console.log('hello rent')}>
-                        <Text style={_styles.textRent}>{'RENT'}</Text>
+                        <Text style={_styles.textRent}>{(I18n.t('detail.rent')).toUpperCase()}</Text>
                     </Buttons.Raised>
                 </View>
             </Card>
@@ -87,7 +88,7 @@ const Detail = (props: any) => {
                 touchable={false}>
                 {renderPreviewComments(comments)}
                 {showViewAll && <Buttons.Flat action={() => console.log('view all')} styles={_styles.btnViewAll}>
-                    <Text style={_styles.textViewAll}>{'View All'}</Text>
+                    <Text style={_styles.textViewAll}>{(I18n.t('detail.viewAll'))}</Text>
                 </Buttons.Flat>}
             </Card>}
         </ScrollView>
