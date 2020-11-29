@@ -27,6 +27,13 @@ const getLocalData = async (key: string) => {
         throw e;
     }
 };
+const clearLocalData = async() => {
+    try {
+        await AsyncStorage.clear()
+    }catch(e){
+        throw e;
+    }
+}
 export default {
     has,
     arrayHasItems,
@@ -34,5 +41,6 @@ export default {
     isObject,
     range,
     saveLocalData,
-    getLocalData
+    getLocalData,
+    clearLocalData
 }
