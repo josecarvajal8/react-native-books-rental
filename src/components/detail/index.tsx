@@ -40,6 +40,7 @@ const onWishList = async (book: any, onShowModal: any, onModalInfo: any, dispatc
                 title: I18n.t('detail.bookAdded'),
                 message: I18n.t('detail.addedToWishList')
             }
+            await MetricsManager.onLogEvent('bookAddedToWishlist', book);
             onModalInfo(modalPayload)
             onShowModal(true)
         } else {
