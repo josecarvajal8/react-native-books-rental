@@ -15,5 +15,6 @@ export const colors = {
   green_checkbox: '#589441',
   shadow_grey: 'rgba(46, 48, 48, 1)',
   blue_sea_grey: '#89b0b9',
-  grey_bg: '#dee7ea'
+  grey_bg: '#dee7ea',
+  red_error: '#e30613'
 }

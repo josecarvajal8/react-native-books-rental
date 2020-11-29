@@ -9,6 +9,8 @@ import { useAppContext } from '../../hooks';
 import { TokenizerManager } from '../../core/tokenizer';
 import utilities from '../../helpers/utilities';
 import { LoadingHoc } from '../HOCs';
+import { Image, Text } from 'react-native-animatable';
+import I18n from 'i18n-js';
 const _styles = getComponentStyle(styles);
 const login = async (dispatch: any, payload: any) => {
     const token: string = TokenizerManager.generateToken(payload);
@@ -28,6 +30,7 @@ const Login = (props: any) => {
     const { navigation = null } = { ...props }
     const [state, dispatch] = useAppContext();
     const { user = {} } = { ...state };
+    const logo = require('../../assets/img/logo.jpg')
     const onLogin = (data: any) => {
         login(dispatch, data)
     }
@@ -39,6 +42,8 @@ const Login = (props: any) => {
         () => {
             return (
                 <View style={_styles.container}>
+                    <Image style={_styles.logo} source={logo} />
+                    <Text style={_styles.welcome}>{I18n.t('global.welcome')}</Text>
                     <Form onLogin={onLogin} />
                 </View >
             )

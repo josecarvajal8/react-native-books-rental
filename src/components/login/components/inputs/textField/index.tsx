@@ -1,5 +1,7 @@
 import React from 'react';
 import { TextInput } from 'react-native';
+import { colors } from '../../../../../config/constants';
+import I18n from 'i18n-js';
 import getComponentStyle from '../../../../../helpers/responsive';
 import styles from './style';
 const _styles = getComponentStyle(styles);
@@ -16,6 +18,7 @@ const TextField = ({ handleChange, handleBlur, values, fieldId, handlerErrors, l
     return (<TextInput
         style={_styles.textField}
         onChangeText={handleChange(fieldId)}
+        placeholderTextColor={colors.primary}
         onBlur={
             () => {
                 handleBlur(fieldId)
@@ -24,7 +27,7 @@ const TextField = ({ handleChange, handleBlur, values, fieldId, handlerErrors, l
         }
         onFocus={() => handlerErrors(values, fieldId)}
         editable={!disable}
-        placeholder={label}
+        placeholder={I18n.t(label)}
         value={values[fieldId]}
     />);
 }
