@@ -9,8 +9,9 @@ interface INavBarContain {
     searchValue: string;
     onChangeSearchValue: Function;
 }
-const NavBarContain = ({ searchValue = '', onChangeSearchValue }: INavBarContain) => {
+const NavBarContain = ({ searchValue = '', onChangeSearchValue}: INavBarContain) => {
     const [showSearchBar, setShowSearchBar] = useState(false)
+
     const renderBaseContain = () => {
         return (
             <View

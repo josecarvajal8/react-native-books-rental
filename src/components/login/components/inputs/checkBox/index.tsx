@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import getComponentStyle from '../../../../../helpers/responsive';
+import I18n from 'i18n-js';
 import styles from './style';
 const _styles = getComponentStyle(styles);
 interface ICheckBox {
@@ -21,8 +22,8 @@ const CheckBox = ({ label = '', value = false, onChangeValue, fieldId }: ICheckB
                 onPress={() => setCheckBoxValue()} >
                 <View style={value ? { ..._styles.box, ..._styles.boxFilled } : _styles.box} />
             </TouchableOpacity>
-            <Text>
-                {label}
+            <Text style={_styles.label}>
+                {I18n.t(label)}
             </Text>
         </View>
     )

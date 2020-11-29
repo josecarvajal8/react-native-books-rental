@@ -28,17 +28,21 @@ const BookList = (props: any) => {
         return title.includes(searchValue)
     }
     ), [books, searchValue])
-    const WrappedBookList = LoadingHoc(() => <View style={_styles.container}>
-        <NavBar>
-            <NavBarContain searchValue={searchValue} onChangeSearchValue={setSearchValue} />
-        </NavBar>
+    const WrappedBookList = LoadingHoc(() =>
         <View style={_styles.containerList}>
             <List books={_bookList}
                 action={(book: any) => navigation.navigate('Detail', { ...book })} />
         </View>
-    </View>);
+    );
     return (
-        <WrappedBookList loading={loading} />
+        <View style={_styles.container}>
+            <NavBar>
+                <NavBarContain
+                    searchValue={searchValue} onChangeSearchValue={setSearchValue} />
+            </NavBar>
+            <WrappedBookList loading={loading} />
+        </View>
+
     )
 }
 export default BookList;

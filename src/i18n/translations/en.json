@@ -13,18 +13,25 @@
         "mail": "Email",
         "age": "Age",
         "terms": "Terms and conditions",
-        "logout": "Logout"
+        "logout": "Logout",
+        "errors": {
+            "name": "Place a valid name",
+            "lastname": "Place a valid lastname",
+            "mail": "Place a valid mail"
+        }
     },
     "detail": {
         "addToWishList": "add to wishlist",
         "rent": "rent",
         "viewAll": "View All"
     },
-    "global":{
+    "global": {
         "cancel": "Cancel",
         "hello": "Hello",
         "changeLanguage": "Switch to",
         "english": "English",
-        "spanish": "Spanish"
-        }
+        "spanish": "Spanish",
+        "years": "years",
+        "welcome": "Welcome"
+    }
 }

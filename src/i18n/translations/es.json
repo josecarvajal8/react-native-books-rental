@@ -13,18 +13,25 @@
         "mail": "Correo",
         "age": "Edad",
         "terms": "Terminos y condiciones",
-        "logout": "Cerrar sesion"
+        "logout": "Cerrar sesion",
+        "errors": {
+            "name": "Ingresa un nombre valido",
+            "lastname": "Ingresa un apellido valido",
+            "mail": "Ingresa un correo valido"
+        }
     },
     "detail": {
         "addToWishList": "agregar a tu wishlist",
         "rent": "alquilar",
         "viewAll": "ver todos"
     },
-    "global":{
+    "global": {
         "cancel": "Cancelar",
         "hello": "Hola",
         "changeLanguage": "Cambiar a",
         "english": "Ingles",
-        "spanish": "Español"
+        "spanish": "Español",
+        "years": "años",
+        "welcome": "Bienvenido"
     }
 }

@@ -8,6 +8,7 @@ import getComponentStyle from '../../../../helpers/responsive';
 import styles from './style';
 import { Buttons } from '../../../commons';
 import { IOption } from '../inputs/picker/index';
+import I18n from 'i18n-js';
 interface IForm {
     onLogin: Function
 }
@@ -28,31 +29,31 @@ const formFieldsProps: any = {
     name: {
         type: FieldTypes.TEXT,
         validation: (data: string) => data.length > 2,
-        label: 'Name',
-        errorLabel: 'Place a valid name'
+        label: 'login.name',
+        errorLabel: 'login.errors.name'
     },
     lastName: {
         type: FieldTypes.TEXT,
         validation: (data: string) => data.length > 3,
-        label: 'Lastname',
-        errorLabel: 'Place a valid lastname'
+        label: 'login.lastname',
+        errorLabel: 'login.errors.lastname'
     },
     email: {
         type: FieldTypes.TEXT,
         validation: (data: string | any) => {
             return validMail.test(data)
         },
-        label: 'Mail',
-        errorLabel: 'Place a valid mail'
+        label: 'login.mail',
+        errorLabel: 'login.errors.mail'
     },
     ages: {
         type: FieldTypes.PICKER,
-        label: 'Ages',
+        label: 'login.age',
         errorLabel: 'Must pick your age'
     },
     terms: {
         type: FieldTypes.CHECKBOX,
-        label: 'Terms and conditions',
+        label: 'login.terms',
         errorLabel: 'Must accept terms and conditions'
     }
 }
@@ -66,6 +67,7 @@ const formValues: ILogin = {
 const [start, stop] = [...agesRange];
 const step = 1;
 const ages = utilities.range(start, stop, step);
+const years = I18n.t('global.years');
 const agesOptions: IOption[] = ages.map((el: number) => ({ label: `${el} years`, value: el.toString() }));
 const inputHandler =
     (type = 'DEFAULT', handleChange = Function, handleBlur: Function,
@@ -127,7 +129,9 @@ const Form = ({ onLogin }: IForm) => {
                         return (
                             <View key={index} style={_styles.containerInput}>
                                 {inputHandler(type, handleChange, handleBlur, values, fieldId, setErrors, label, setFieldValue)}
-                                {!!validationError && <Text>{validationError}</Text>}
+                                {!!validationError && <Text style={_styles.error}>
+                                    {I18n.t(validationError)}
+                                </Text>}
                             </View>
                         )
                     })
@@ -146,9 +150,8 @@ const Form = ({ onLogin }: IForm) => {
                     <>
                         {renderInputFields(handleChange, handleBlur, values, setFieldValue)}
                         <Buttons.Raised action={handleSubmit} disabled={validateForm(values)}
-
                         >
-                            <Text>{'Login'}</Text>
+                            <Text style={_styles.loginText}>{I18n.t('login.login')}</Text>
                         </Buttons.Raised>
                     </>
                 )}

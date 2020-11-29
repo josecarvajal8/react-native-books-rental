@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { TouchableOpacity, View, Text, FlatList } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+import I18n from 'i18n-js'
 import getComponentStyle from '../../../../../helpers/responsive';
 import styles from './style';
 const _styles = getComponentStyle(styles);
@@ -33,16 +34,18 @@ const PickerField = ({ value, setFieldValue, fieldId, options, label }: IPicker)
         return (
             <FlatList data={options}
                 keyExtractor={({ value }) => value}
+                showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => {
                     const { label, value } = { ...item };
                     return (
                         <TouchableOpacity
+                            style={_styles.optionContainer}
                             key={value}
                             onPress={() => {
                                 expandList()
                                 selectOption(value)
                             }}>
-                            <Text>{label}</Text>
+                            <Text style={_styles.optionText}>{label}</Text>
                         </TouchableOpacity>
                     )
                 }} />
@@ -53,7 +56,9 @@ const PickerField = ({ value, setFieldValue, fieldId, options, label }: IPicker)
             <TouchableOpacity
                 style={_styles.btnExpand}
                 onPress={() => expandList()}>
-                <Text>{!!_selectedValue ? _selectedValue : label}</Text>
+                <Text style={_styles.placeHolder}>
+                    {!!_selectedValue ? _selectedValue : I18n.t(label)}
+                </Text>
             </TouchableOpacity>
             <View style={_styles.optionsContainer}>
                 {isExpand && renderOptions()}

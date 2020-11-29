@@ -13,7 +13,7 @@ const RaisedButton = ({ children, styles = _styles.container, action, disabled =
     return (
         <TouchableOpacity disabled={disabled}
             onPress={() => action()}
-            style={disabled ? { ..._styles.container, ...styles, ..._styles.disabled  } : { ..._styles.container, ...styles }}>
+            style={{ ..._styles.container, ...styles }}>
             {children}
         </TouchableOpacity>
     )

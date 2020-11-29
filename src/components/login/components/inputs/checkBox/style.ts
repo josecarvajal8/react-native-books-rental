@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../../../config/constants';
+import { colors, fonts } from '../../../../../config/constants';
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
@@ -21,7 +21,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white
     },
     boxFilled: {
-        backgroundColor: colors.green_checkbox
+        backgroundColor: colors.primary
+    },
+    label:{
+        fontFamily: fonts.REGULAR
     }
 });
 export default styles;
