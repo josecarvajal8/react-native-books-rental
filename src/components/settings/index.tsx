@@ -4,11 +4,11 @@ import getComponentStyle from '../../helpers/responsive';
 import { Buttons, Card, NavBar } from '../commons';
 import BaseContainNavBar from '../commons/baseContainNavBar';
 import I18n from 'i18n-js';
-import styles from './style';
 import { setI18nConfig } from '../../i18n';
 import { useAppContext } from '../../hooks';
 import { LANGUAGE_CHANGE } from '../../context/flux/types';
 import utilities from '../../helpers/utilities';
+import styles from './style';
 const _styles = getComponentStyle(styles);
 const currentLocale = I18n.currentLocale();
 const handleLocaleData = () => {

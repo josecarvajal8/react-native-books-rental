@@ -87,7 +87,7 @@ const Detail = (props: any) => {
                     : _styles.commentsContainer}
                 touchable={false}>
                 {renderPreviewComments(comments)}
-                {showViewAll && <Buttons.Flat action={() => console.log('view all')} styles={_styles.btnViewAll}>
+                {showViewAll && <Buttons.Flat action={() => navigation.navigate('Comments', { comments })} styles={_styles.btnViewAll}>
                     <Text style={_styles.textViewAll}>{(I18n.t('detail.viewAll'))}</Text>
                 </Buttons.Flat>}
             </Card>}
