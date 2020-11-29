@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { IRoute, routes_stack, routes_tab, tabsIcons } from './routes';
 import utilities from '../helpers/utilities';
 import { TokenizerManager } from '../core/tokenizer';
-import { LANGUAGE_CHANGE, LOGIN_PERSISTANCE } from '../context/flux/types';
+import { LOGIN_PERSISTANCE } from '../context/flux/types';
 import { useAppContext } from '../hooks';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 

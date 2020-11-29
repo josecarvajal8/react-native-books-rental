@@ -8,6 +8,7 @@ import { FETCH_LOGIN } from './api';
 import { useAppContext } from '../../hooks';
 import { TokenizerManager } from '../../core/tokenizer';
 import utilities from '../../helpers/utilities';
+import { LoadingHoc } from '../HOCs';
 const _styles = getComponentStyle(styles);
 const login = async (dispatch: any, payload: any) => {
     const token: string = TokenizerManager.generateToken(payload);
@@ -34,10 +35,18 @@ const Login = (props: any) => {
         validateLogin(navigation, user)
     }
         , [user]);
+    const WrappedLogin = LoadingHoc(
+        () => {
+            return (
+                <View style={_styles.container}>
+                    <Form onLogin={onLogin} />
+                </View >
+            )
+        });
+    const { loading = false } = { ...state };
     return (
-        <View style={_styles.container}>
-            <Form onLogin={onLogin} />
-        </View >
+        <WrappedLogin {...props} loading={loading} />
     )
+
 }
 export default Login;

@@ -4,6 +4,7 @@ import { FETCH_DATA } from '../../context/flux/types';
 import getComponentStyle from '../../helpers/responsive';
 import { useAppContext } from '../../hooks';
 import { NavBar } from '../commons';
+import { LoadingHoc } from '../HOCs';
 import { FETCH_BOOKS } from './api';
 import { List, NavBarContain } from './components';
 import styles from './style';
@@ -18,7 +19,7 @@ const BookList = (props: any) => {
     const [state, dispatch] = useAppContext();
     const { navigation = {} } = { ...props };
     const [searchValue, setSearchValue] = useState('');
-    const { books = [] } = { ...state }
+    const { books = [], loading = false } = { ...state }
     useEffect(() => {
         getBooks(dispatch)
     }, []);
@@ -27,16 +28,17 @@ const BookList = (props: any) => {
         return title.includes(searchValue)
     }
     ), [books, searchValue])
-    return (
-        <View style={_styles.container}>
-            <NavBar>
-                <NavBarContain searchValue={searchValue} onChangeSearchValue={setSearchValue} />
-            </NavBar>
-            <View style={_styles.containerList}>
-                <List books={_bookList}
-                    action={(book: any) => navigation.navigate('Detail', { ...book })} />
-            </View>
+    const WrappedBookList = LoadingHoc(() => <View style={_styles.container}>
+        <NavBar>
+            <NavBarContain searchValue={searchValue} onChangeSearchValue={setSearchValue} />
+        </NavBar>
+        <View style={_styles.containerList}>
+            <List books={_bookList}
+                action={(book: any) => navigation.navigate('Detail', { ...book })} />
         </View>
+    </View>);
+    return (
+        <WrappedBookList loading={loading} />
     )
 }
 export default BookList;
