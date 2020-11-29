@@ -1,10 +1,10 @@
-import { color } from "react-native-reanimated";
 import { colors, fonts } from "../../config/constants";
 
 const styles = {
     container: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: colors.grey_bg
     },
     profileInfo: {
         flexDirection: 'row',

@@ -32,13 +32,24 @@ exports[`Render comment component correctly 1`] = `
       }
     }
   >
-    <Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontFamily": "Montserrat-SemiBold",
+          "fontSize": 27.17391304347826,
+        }
+      }
+    >
       testing
     </Text>
     <Text
       numberOfLines={4}
       style={
         Object {
+          "fontFamily": "Montserrat-Regular",
+          "fontSize": 27.17391304347826,
+          "marginTop": 4.466517857142858,
           "width": 434.7826086956522,
         }
       }

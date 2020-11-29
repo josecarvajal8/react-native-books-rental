@@ -6,7 +6,9 @@ exports[`Render BaseContainNavBar component correctly 1`] = `
     Object {
       "alignItems": "center",
       "flexDirection": "row",
+      "justifyContent": "space-between",
       "marginTop": 7.444196428571429,
+      "paddingHorizontal": 36.231884057971016,
     }
   }
 >
@@ -22,72 +24,52 @@ exports[`Render BaseContainNavBar component correctly 1`] = `
       accessible={true}
       style={
         Object {
-          "borderWidth": 1.8115942028985508,
           "height": 29.776785714285715,
-          "marginLeft": 36.231884057971016,
           "opacity": 1,
           "width": 36.231884057971016,
         }
       }
     >
-      <View />
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#ffffff",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
     </View>
   </RNGestureHandlerButton>
   <Text
     forwardedRef={[Function]}
     style={
       Object {
-        "marginLeft": 253.62318840579712,
+        "color": "#ffffff",
+        "fontFamily": "Montserrat-Bold",
+        "fontSize": 45.289855072463766,
       }
     }
   >
     test
   </Text>
-</View>
-`;
-
-exports[`Render booksList component correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flexDirection": "row",
-      "marginTop": 7.444196428571429,
-    }
-  }
->
-  <RNGestureHandlerButton
-    collapsable={false}
-    onGestureEvent={[Function]}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
-    onHandlerStateChange={[Function]}
-    rippleColor={0}
-  >
-    <View
-      accessible={true}
-      style={
-        Object {
-          "borderWidth": 1.8115942028985508,
-          "height": 29.776785714285715,
-          "marginLeft": 36.231884057971016,
-          "opacity": 1,
-          "width": 36.231884057971016,
-        }
-      }
-    >
-      <View />
-    </View>
-  </RNGestureHandlerButton>
-  <Text
-    forwardedRef={[Function]}
+  <View
     style={
       Object {
-        "marginLeft": 253.62318840579712,
+        "width": 36.231884057971016,
       }
     }
-  >
-    test
-  </Text>
+  />
 </View>
 `;

@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render booksList component correctly 1`] = `
-<RNGestureHandlerButton
-  collapsable={false}
-  onGestureEvent={[Function]}
-  onGestureHandlerEvent={[Function]}
-  onGestureHandlerStateChange={[Function]}
-  onHandlerStateChange={[Function]}
-  rippleColor={0}
->
-  <View
-    accessible={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "height": 66.99776785714286,
-        "justifyContent": "center",
-        "opacity": 1,
-        "width": 362.3188405797101,
-      }
-    }
-  />
-</RNGestureHandlerButton>
-`;
-
 exports[`Render flatButton component correctly 1`] = `
 <RNGestureHandlerButton
   collapsable={false}

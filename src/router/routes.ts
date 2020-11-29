@@ -3,6 +3,7 @@ import BookList from "../components/booksList";
 import Login from "../components/login";
 import WishList from "../components/wishList";
 import SettingsScreen from "../components/settings";
+import Comments from "../components/comments";
 import I18n from 'i18n-js';
 import { setI18nConfig } from "../i18n";
 setI18nConfig();
@@ -22,6 +23,11 @@ export const routes_stack: IRoute[] = [
         name: 'Detail',
         component: Detail,
         options: { title: I18n.t('titles.detail'), headerShown: false }
+    },
+    {
+        name: 'Comments',
+        component: Comments,
+        options: { title: I18n.t('titles.comments'), headerShown: false }
     }
 ];
 export const tabsIcons: { [key: string]: string } = {

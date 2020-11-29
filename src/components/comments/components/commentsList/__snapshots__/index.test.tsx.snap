@@ -2,6 +2,7 @@
 
 exports[`Render commentsList component correctly 1`] = `
 <RCTScrollView
+  bounces={false}
   data={Array []}
   disableVirtualization={false}
   getItem={[Function]}

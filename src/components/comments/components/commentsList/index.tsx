@@ -1,6 +1,6 @@
 import React from 'react'
 import { FlatList } from 'react-native';
-import { Comment } from '..';
+import { Comment } from '../../../detail/components';
 interface ICommentsList {
     data: Array<any>,
     renderElementsAmount?: number,
@@ -13,6 +13,7 @@ const CommentsList = ({ data = [], renderElementsAmount = 0, scrollable = true }
         <FlatList data={regulatedData}
             keyExtractor={(_, index) => index.toString()}
             scrollEnabled={scrollable}
+            bounces={false}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => {
                 const { user_nick = '', comment_text = '' } = { ...item };

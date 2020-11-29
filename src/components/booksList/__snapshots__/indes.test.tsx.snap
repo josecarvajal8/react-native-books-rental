@@ -41,6 +41,7 @@ exports[`Render booksList component correctly 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginTop": 7.444196428571429,
+          "paddingHorizontal": 36.231884057971016,
         }
       }
     >
@@ -56,16 +57,44 @@ exports[`Render booksList component correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "borderWidth": 1.8115942028985508,
             "height": 29.776785714285715,
-            "marginLeft": 36.231884057971016,
             "opacity": 1,
             "width": 36.231884057971016,
           }
         }
-      />
-      <Text>
-        LIBRARY
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Montserrat-Bold",
+            "fontSize": 45.289855072463766,
+            "lineHeight": 0,
+          }
+        }
+      >
+        [missing "en.titles.library" translation]
       </Text>
       <View
         accessible={true}
@@ -79,14 +108,33 @@ exports[`Render booksList component correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "borderWidth": 1.8115942028985508,
             "height": 29.776785714285715,
-            "marginRight": 36.231884057971016,
             "opacity": 1,
             "width": 36.231884057971016,
           }
         }
-      />
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
     </View>
   </RCTSafeAreaView>
   <View
