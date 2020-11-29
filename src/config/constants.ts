@@ -16,5 +16,6 @@ export const colors = {
   shadow_grey: 'rgba(46, 48, 48, 1)',
   blue_sea_grey: '#89b0b9',
   grey_bg: '#dee7ea',
-  red_error: '#e30613'
+  red_error: '#e30613',
+  grey_soft: 'rgba(69, 69, 69, 0.7)'
 }

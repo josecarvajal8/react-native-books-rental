@@ -23,7 +23,9 @@
     "detail": {
         "addToWishList": "add to wishlist",
         "rent": "rent",
-        "viewAll": "View All"
+        "viewAll": "View All",
+        "bookAdded": "Book added",
+        "addedToWishList": "The book was added to the wishlist"
     },
     "global": {
         "cancel": "Cancel",
@@ -32,6 +34,11 @@
         "english": "English",
         "spanish": "Spanish",
         "years": "years",
-        "welcome": "Welcome"
+        "welcome": "Welcome",
+        "ok": "Okay"
+    },
+    "errors":{
+        "default": {"title": "Oups", "message": "Looks like our team have work to do, We will improve"},
+        "alreadyInList": {"title": "Hey rock star", "message":"This book is already in the list!"}
     }
 }

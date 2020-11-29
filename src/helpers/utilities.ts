@@ -12,6 +12,7 @@ const isObject = (obj: { [key: string]: any }) => {
 const range = (start: number, stop: number, step: number) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 const isNumber = (value: any) => Object.prototype.toString.call(value) === '[object Number]';
 const saveLocalData = async (key: string, value: any) => {
+    console.log('value',value)
     try {
         await AsyncStorage.setItem(key, JSON.stringify(value));
     } catch (e) {

@@ -6,7 +6,7 @@ interface IProvider {
     children: React.ReactNode
 }
 const Provider = ({ children }: IProvider) => {
-    const intialState = { loading: false, books: [], suggestions: [], error: null, user: null, locale: 'en' };
+    const intialState = { loading: false, books: [], suggestions: [], error: null, user: null, locale: 'en', wishlist: [] };
     const [state, dispatch] = useReducer(reducer, intialState);
     return (< DispatchContext.Provider value={dispatch} >
         <StateContext.Provider value={state}>
