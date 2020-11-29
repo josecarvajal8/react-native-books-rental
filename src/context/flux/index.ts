@@ -1,6 +1,6 @@
-import { sesionPersistance } from "./actions/local";
+import { languageChange, sesionPersistance } from "./actions/local";
 import { booksFailure, booksSuccess, fetchRequest, loginFailure, loginSucces, suggestionsFailure, suggestionsSuccess } from "./actions/request";
-import { FETCH_BOOKS_FAILURE, FETCH_BOOKS_SUCCESS, FETCH_DATA, FETCH_LOGIN_FAILURE, FETCH_LOGIN_SUCCESS, FETCH_SUGGESTIONS_FAILURE, FETCH_SUGGESTIONS_SUCCESS, LOGIN_PERSISTANCE } from "./types";
+import { FETCH_BOOKS_FAILURE, FETCH_BOOKS_SUCCESS, FETCH_DATA, FETCH_LOGIN_FAILURE, FETCH_LOGIN_SUCCESS, FETCH_SUGGESTIONS_FAILURE, FETCH_SUGGESTIONS_SUCCESS, LANGUAGE_CHANGE, LOGIN_PERSISTANCE } from "./types";
 
 const reducers: any = {
     [FETCH_BOOKS_SUCCESS]: (state: any, payload: any) => booksSuccess(state, payload),
@@ -11,6 +11,7 @@ const reducers: any = {
     [FETCH_LOGIN_FAILURE]: (state: any, payload: any) => loginFailure(state, payload),
     [FETCH_DATA]: (state: any, payload: any) => fetchRequest(state, payload),
     [LOGIN_PERSISTANCE]:(state: any, payload: any) => sesionPersistance(state, payload),
+    [LANGUAGE_CHANGE]: (state:any, payload:any) => languageChange(state, payload),
     ['DEFAULT']: (state: any, payload: any) => state
 
 }

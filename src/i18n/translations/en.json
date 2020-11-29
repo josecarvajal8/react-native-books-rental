@@ -12,7 +12,8 @@
         "lastname": "Lastname",
         "mail": "Email",
         "age": "Age",
-        "terms": "Terms and conditions"
+        "terms": "Terms and conditions",
+        "logout": "Logout"
     },
     "detail": {
         "addToWishList": "add to wishlist",
@@ -20,6 +21,10 @@
         "viewAll": "View All"
     },
     "global":{
-        "cancel": "Cancel"
-    }
+        "cancel": "Cancel",
+        "hello": "Hello",
+        "changeLanguage": "Switch to",
+        "english": "English",
+        "spanish": "Spanish"
+        }
 }

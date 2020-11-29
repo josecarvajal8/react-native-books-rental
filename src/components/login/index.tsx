@@ -11,7 +11,7 @@ import utilities from '../../helpers/utilities';
 const _styles = getComponentStyle(styles);
 const login = async (dispatch: any, payload: any) => {
     const token: string = TokenizerManager.generateToken(payload);
-    dispatch({
+    await dispatch({
         type: FETCH_DATA,
         payload: { request: FETCH_LOGIN({ ...payload, token }), dispatch }
     });

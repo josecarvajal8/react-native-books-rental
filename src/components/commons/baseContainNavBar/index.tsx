@@ -9,12 +9,13 @@ const _styles = getComponentStyle(styles);
 interface IBaseContainNavBar {
     title: string;
     onBack: Function;
+    visibleLeftBtn?: boolean;
 }
-const BaseContainNavBar = ({ title = '', onBack }: IBaseContainNavBar) => {
+const BaseContainNavBar = ({ title = '', onBack, visibleLeftBtn = true }: IBaseContainNavBar) => {
     return (
         <View style={_styles.container}>
-            <TouchableOpacity style={_styles.backBtn}
-                onPress={() => onBack()}>
+            <TouchableOpacity style={visibleLeftBtn ? _styles.backBtn : { ..._styles.backBtn, opacity: 0 }}
+                onPress={() => onBack()} disabled={!visibleLeftBtn}>
                 <FontAwesome name={'chevron-left'}{..._styles.backIcon} />
             </TouchableOpacity>
             <Text style={_styles.title}>{title}</Text>
