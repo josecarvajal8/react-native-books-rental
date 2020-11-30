@@ -14,8 +14,9 @@ exports[`Render booksList component correctly 1`] = `
     emulateUnlessSupported={true}
     style={
       Object {
-        "height": 148.88392857142858,
-        "width": 750,
+        "height": 100,
+        "width": "100%",
+        "zIndex": 100,
       }
     }
   >
@@ -28,10 +29,10 @@ exports[`Render booksList component correctly 1`] = `
       }
       style={
         Object {
-          "height": 297.76785714285717,
+          "height": 200,
           "position": "absolute",
-          "top": -66.99776785714286,
-          "width": 753.6231884057971,
+          "top": -45,
+          "width": "100%",
         }
       }
     />
@@ -40,8 +41,9 @@ exports[`Render booksList component correctly 1`] = `
         Object {
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "marginTop": 7.444196428571429,
-          "paddingHorizontal": 36.231884057971016,
+          "marginTop": 5,
+          "paddingHorizontal": 20,
+          "zIndex": 200,
         }
       }
     >
@@ -57,9 +59,9 @@ exports[`Render booksList component correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 29.776785714285715,
+            "height": 20,
             "opacity": 1,
-            "width": 36.231884057971016,
+            "width": 20,
           }
         }
       >
@@ -89,8 +91,7 @@ exports[`Render booksList component correctly 1`] = `
           Object {
             "color": "#ffffff",
             "fontFamily": "Montserrat-Bold",
-            "fontSize": 45.289855072463766,
-            "lineHeight": 0,
+            "fontSize": 25,
           }
         }
       >
@@ -108,9 +109,9 @@ exports[`Render booksList component correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 29.776785714285715,
+            "height": 20,
             "opacity": 1,
-            "width": 36.231884057971016,
+            "width": 20,
           }
         }
       >
@@ -137,49 +138,38 @@ exports[`Render booksList component correctly 1`] = `
       </View>
     </View>
   </RCTSafeAreaView>
-  <View
+  <RCTScrollView
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
     style={
       Object {
-        "justifyContent": "center",
-        "marginTop": 29.776785714285715,
+        "flex": 1,
+        "marginTop": 10,
       }
     }
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
   >
-    <RCTScrollView
-      data={Array []}
-      disableVirtualization={false}
-      getItem={[Function]}
-      getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      onContentSizeChange={[Function]}
-      onEndReachedThreshold={2}
-      onLayout={[Function]}
-      onMomentumScrollEnd={[Function]}
-      onScroll={[Function]}
-      onScrollBeginDrag={[Function]}
-      onScrollEndDrag={[Function]}
-      removeClippedSubviews={false}
-      renderItem={[Function]}
-      scrollEventThrottle={50}
-      showsVerticalScrollIndicator={false}
-      stickyHeaderIndices={Array []}
-      style={
-        Object {
-          "height": 1161.294642857143,
-          "marginBottom": 156.328125,
-          "marginLeft": 63.40579710144928,
-          "width": 750,
-        }
-      }
-      updateCellsBatchingPeriod={50}
-      viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
-    >
-      <View />
-    </RCTScrollView>
-  </View>
+    <View />
+  </RCTScrollView>
 </View>
 `;

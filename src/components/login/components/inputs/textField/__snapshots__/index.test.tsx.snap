@@ -7,18 +7,20 @@ exports[`Render textField component correctly 1`] = `
   onBlur={[Function]}
   onChangeText={null}
   onFocus={[Function]}
-  placeholder="test_field"
+  placeholder="[missing \\"en.test_field\\" translation]"
+  placeholderTextColor="#0baee6"
   rejectResponderTermination={true}
   style={
     Object {
+      "backgroundColor": "#ffffff",
       "borderColor": "#626565",
-      "borderRadius": 108.69565217391305,
-      "borderWidth": 3.6231884057971016,
-      "height": 66.99776785714286,
+      "borderRadius": 60,
+      "borderWidth": 2,
+      "color": "#0baee6",
+      "fontFamily": "Montserrat-Regular",
+      "height": 45,
       "padding": 10,
-      "paddingHorizontal": 18.115942028985508,
-      "paddingVertical": 14.888392857142858,
-      "width": 543.4782608695652,
+      "width": 300,
     }
   }
   underlineColorAndroid="transparent"

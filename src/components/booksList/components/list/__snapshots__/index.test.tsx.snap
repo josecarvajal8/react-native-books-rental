@@ -24,10 +24,8 @@ exports[`Render List component correctly 1`] = `
   stickyHeaderIndices={Array []}
   style={
     Object {
-      "height": 1161.294642857143,
-      "marginBottom": 156.328125,
-      "marginLeft": 63.40579710144928,
-      "width": 750,
+      "flex": 1,
+      "marginTop": 10,
     }
   }
   updateCellsBatchingPeriod={50}

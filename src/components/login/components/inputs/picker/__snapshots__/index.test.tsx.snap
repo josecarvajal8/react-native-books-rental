@@ -5,11 +5,11 @@ exports[`Render pickerField component correctly 1`] = `
   forwardedRef={[Function]}
   style={
     Object {
+      "backgroundColor": "#ffffff",
       "borderColor": "#626565",
-      "borderRadius": 108.69565217391305,
-      "borderWidth": 3.6231884057971016,
-      "height": 74.44196428571429,
-      "width": 543.4782608695652,
+      "borderRadius": 60,
+      "borderWidth": 2,
+      "height": 50,
     }
   }
 >
@@ -25,21 +25,28 @@ exports[`Render pickerField component correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "marginLeft": 18.115942028985508,
-        "marginTop": 14.888392857142858,
+        "marginLeft": 10,
+        "marginTop": 10,
         "opacity": 1,
       }
     }
   >
-    <Text>
-      test_field
+    <Text
+      style={
+        Object {
+          "color": "#0baee6",
+          "fontFamily": "Montserrat-Regular",
+        }
+      }
+    >
+      [missing "en.test_field" translation]
     </Text>
   </View>
   <View
     style={
       Object {
-        "marginBottom": 14.888392857142858,
-        "marginTop": 14.888392857142858,
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   />
