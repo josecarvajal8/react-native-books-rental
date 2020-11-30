@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Image, Text, View } from 'react-native';
-import getComponentStyle from '../../helpers/responsive';
 import { Buttons, Card, NavBar } from '../commons';
 import BaseContainNavBar from '../commons/baseContainNavBar';
 import I18n from 'i18n-js';
@@ -8,10 +7,9 @@ import { setI18nConfig } from '../../i18n';
 import { useAppContext } from '../../hooks';
 import { LANGUAGE_CHANGE } from '../../context/flux/types';
 import utilities from '../../helpers/utilities';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 const currentLocale = I18n.currentLocale();
-const handleLocaleData = () => {
+const handleLocaleData = (locale: string) => {
     const handler: any = {
         ['es']: {
             label: I18n.t('global.english'),
@@ -22,7 +20,7 @@ const handleLocaleData = () => {
             changeParam: 'es'
         }
     }
-    return handler[currentLocale] || handler['en'];
+    return handler[locale] || handler['en'];
 }
 
 const onChangeLanguage = (changeParam: string, dispatch: any) => {
@@ -42,7 +40,7 @@ const Settings = (props: any) => {
     const [state, dispatch] = useAppContext();
     const { user = {}, locale = 'en' } = { ...state };
     const { name = '', lastName = '' } = { ...user };
-    const { label = '', changeParam = '' } = { ...handleLocaleData() }
+    const { label = '', changeParam = '' } = { ...handleLocaleData(locale) }
     useEffect(() => {
         onSetLocale(locale);
     }, [locale])

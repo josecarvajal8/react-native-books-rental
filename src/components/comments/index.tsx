@@ -1,12 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import getComponentStyle from '../../helpers/responsive';
 import { NavBar } from '../commons';
 import BaseContainNavBar from '../commons/baseContainNavBar';
 import I18n from 'i18n-js';
-import styles from './style';
+import _styles from './style';
 import { CommentsList } from './components';
-const _styles = getComponentStyle(styles);
 const Comments = (props: any) => {
     const { route: { params = {} } = {}, navigation } = props
     const { comments = [] } = { ...params };

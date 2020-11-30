@@ -4,8 +4,7 @@ import { Formik } from 'formik';
 import utilities from '../../../../helpers/utilities';
 import { agesRange, validMail } from '../../../../config/constants';
 import { CheckBox, TextField, PickerField } from '../inputs'
-import getComponentStyle from '../../../../helpers/responsive';
-import styles from './style';
+import _styles from './style';
 import { Buttons } from '../../../commons';
 import { IOption } from '../inputs/picker/index';
 import I18n from 'i18n-js';
@@ -24,7 +23,6 @@ enum FieldTypes {
     PICKER = 'PICKER',
     CHECKBOX = 'CHECKBOX'
 }
-const _styles = getComponentStyle(styles);
 const formFieldsProps: any = {
     name: {
         type: FieldTypes.TEXT,
@@ -139,23 +137,27 @@ const Form = ({ onLogin }: IForm) => {
             </>);
     }
     return (
-        <Formik
-            initialValues={formValues}
-            onSubmit={values => {
-                onLogin(values)
-            }}
-        >
-            {({ handleChange, handleBlur, handleSubmit, values, setFieldValue }: any) =>
-                (
-                    <>
-                        {renderInputFields(handleChange, handleBlur, values, setFieldValue)}
-                        <Buttons.Raised action={handleSubmit} disabled={validateForm(values)}
-                        >
-                            <Text style={_styles.loginText}>{I18n.t('login.login')}</Text>
-                        </Buttons.Raised>
-                    </>
-                )}
-        </Formik >
+        <View style={_styles.container}>
+            <Formik
+                initialValues={formValues}
+                onSubmit={async values => {
+                    await onLogin(values)
+                }}
+            >
+                {({ handleChange, handleBlur, handleSubmit, values, setFieldValue }: any) =>
+                    (
+                        <>
+                            {renderInputFields(handleChange, handleBlur, values, setFieldValue)}
+                            <View>
+                                <Buttons.Raised action={handleSubmit} disabled={validateForm(values)}
+                                >
+                                    <Text style={_styles.loginText}>{I18n.t('login.login')}</Text>
+                                </Buttons.Raised>
+                            </View>
+                        </>
+                    )}
+            </Formik >
+        </View>
 
     )
 }

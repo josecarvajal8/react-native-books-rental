@@ -1,10 +1,8 @@
 import React from 'react'
 import { FlatList } from 'react-native';
 import { Image } from 'react-native-animatable';
-import getComponentStyle from '../../../../helpers/responsive';
-import { Book, Card } from '../../../commons';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import { Card } from '../../../commons';
+import _styles from './style';
 interface ISuggestionsCarrousel {
     data: Array<any>;
     onDetailSuggest: Function;

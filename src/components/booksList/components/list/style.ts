@@ -1,20 +1,15 @@
-const styles = {
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
     cardStyle: {
         marginTop: 10,
-        justifyContent: 'center'
+        marginHorizontal: 10,
+        justifyContent: 'center',
+        marginBottom: 10
     },
     list: {
-        ios: {
-            width: 414,
-            height: 780,
-            marginBottom: 105
-        },
-        android: {
-            width: 384,
-            height: 500,
-            marginBottom: 80
-        },
-        marginLeft: 35
+        flex: 1,
+        marginTop: 10,
     }
-}
+});
 export default styles;

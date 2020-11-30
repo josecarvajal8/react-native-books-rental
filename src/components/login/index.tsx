@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
-import styles from './style';
-import getComponentStyle from '../../helpers/responsive';
+import { SafeAreaView, View } from 'react-native';
+import _styles from './style';
 import { Form } from './components';
 import { FETCH_DATA } from '../../context/flux/types';
 import { FETCH_LOGIN } from './api';
@@ -11,7 +10,7 @@ import utilities from '../../helpers/utilities';
 import { LoadingHoc } from '../HOCs';
 import { Image, Text } from 'react-native-animatable';
 import I18n from 'i18n-js';
-const _styles = getComponentStyle(styles);
+import { ScrollView } from 'react-native-gesture-handler';
 const login = async (dispatch: any, payload: any) => {
     const token: string = TokenizerManager.generateToken(payload);
     await dispatch({
@@ -41,11 +40,15 @@ const Login = (props: any) => {
     const WrappedLogin = LoadingHoc(
         () => {
             return (
-                <View style={_styles.container}>
-                    <Image style={_styles.logo} source={logo} />
-                    <Text style={_styles.welcome}>{I18n.t('global.welcome')}</Text>
-                    <Form onLogin={onLogin} />
-                </View >
+                <SafeAreaView style={_styles.container}>
+                    <ScrollView style={_styles.container}>
+                        <View style={_styles.containerLogo}>
+                            <Image style={_styles.logo} source={logo} />
+                            <Text style={_styles.welcome}>{I18n.t('global.welcome')}</Text>
+                        <Form onLogin={onLogin} />
+                        </View>
+                    </ScrollView >
+                </SafeAreaView>
             )
         });
     const { loading = false } = { ...state };

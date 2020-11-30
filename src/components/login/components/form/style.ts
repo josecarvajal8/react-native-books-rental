@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
     loginText:{
         fontFamily: fonts.SEMIBOLD,
         color: colors.white
+    },
+    container:{
+        flex: 1
     }
 });
 export default styles
