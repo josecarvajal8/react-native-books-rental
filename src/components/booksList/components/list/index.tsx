@@ -1,10 +1,8 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import { Book } from '../../../commons';
-import getComponentStyle from '../../../../helpers/responsive';
 import { Card } from '../../../commons';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 interface IList {
     books: Array<any>,
     action?: Function

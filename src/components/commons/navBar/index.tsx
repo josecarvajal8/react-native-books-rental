@@ -1,9 +1,6 @@
 import React from 'react';
-import { SafeAreaView, TouchableOpacity, Image, View } from 'react-native';
-import styles from './style';
-import getComponentStyle from '../../../helpers/responsive';
-import { Text } from 'react-native-animatable';
-const _styles = getComponentStyle(styles);
+import { SafeAreaView, Image } from 'react-native';
+import _styles from './style';
 const img = require('../../../assets/img/bc_nav_bar_3x.png');
 interface INavBar {
     children: React.ReactNode

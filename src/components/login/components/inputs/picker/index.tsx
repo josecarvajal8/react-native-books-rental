@@ -2,9 +2,7 @@ import React, { useRef, useState } from 'react';
 import { TouchableOpacity, View, Text, FlatList } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import I18n from 'i18n-js'
-import getComponentStyle from '../../../../../helpers/responsive';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 export interface IOption {
     value: string;
     label: string;
@@ -34,7 +32,8 @@ const PickerField = ({ value, setFieldValue, fieldId, options, label }: IPicker)
         return (
             <FlatList data={options}
                 keyExtractor={({ value }) => value}
-                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                horizontal={true}
                 renderItem={({ item }) => {
                     const { label, value } = { ...item };
                     return (

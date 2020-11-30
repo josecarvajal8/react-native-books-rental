@@ -17,10 +17,8 @@ const WishList = (props: any) => {
             <NavBar key={'navbar'} >
                 <BaseContainNavBar onBack={() => null} title={I18n.t('titles.wishlist')} visibleLeftBtn={false} />
             </NavBar>
-            <View style={_styles.containerList}>
                 <List books={wishlist}
                     action={(book: any) => navigation.navigate('Detail', { ...book })} />
-            </View>
         </View>
     )
 }

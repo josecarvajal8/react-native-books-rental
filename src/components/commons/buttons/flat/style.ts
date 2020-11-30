@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../../config/constants';
 const styles = StyleSheet.create({
     container: {
-        width: 200,
+        width: "80%",
         height: 45,
         alignItems: 'center',
         justifyContent: 'center'
