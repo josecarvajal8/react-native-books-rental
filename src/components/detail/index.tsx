@@ -86,10 +86,10 @@ const Detail = (props: any) => {
     return (
         <>
             {showModal && <Modal btnAction={() => modalAction()} btnText={I18n.t('global.ok')} message={message} title={titleModal} />}
+            <NavBar key={'navbar'} >
+                <BaseContainNavBar title={I18n.t('titles.detail')} onBack={() => navigation.goBack()} />
+            </NavBar>
             <ScrollView style={_styles.container} bounces={false}>
-                <NavBar key={'navbar'} >
-                    <BaseContainNavBar title={I18n.t('titles.detail')} onBack={() => navigation.goBack()} />
-                </NavBar>
                 <View style={_styles.containerCards}>
                     <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
                         <View style={_styles.bookInfoContainer}>
@@ -118,11 +118,11 @@ const Detail = (props: any) => {
                 {loading ?
                     <ActivityIndicator style={_styles.activityIndicator} size={'small'} color={colors.primary} /> :
                     utilities.arrayHasItems(suggestions) &&
-                        <SuggestionsCarrousel data={suggestions}
-                            onDetailSuggest={(book: any) => navigation.push('Detail', { ...book })} />
-                    }
+                    <SuggestionsCarrousel data={suggestions}
+                        onDetailSuggest={(book: any) => navigation.push('Detail', { ...book })} />
+                }
                 {utilities.arrayHasItems(comments) &&
-                    <View style={_styles.containerCards}>
+                    <View style={{ ..._styles.containerCards, ..._styles.mBottom }}>
                         <Card key={'comments'}
                             styles={showViewAll ?
                                 { ..._styles.commentsContainer, ..._styles.commentsContainerHeight }

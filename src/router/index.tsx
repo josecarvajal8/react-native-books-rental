@@ -37,7 +37,9 @@ const getScreenOptions = (route: any) => {
 }
 const renderRoutesTab = () => {
     return (
-        <Tab.Navigator screenOptions={({ route }) => getScreenOptions(route)}>
+        <Tab.Navigator
+            tabBarOptions={{ keyboardHidesTabBar: true }}
+            screenOptions={({ route }) => getScreenOptions(route)}>
             {routes_tab.map((route: IRoute, index: number) =>
                 <Tab.Screen key={index} {...route} />)}
         </Tab.Navigator>

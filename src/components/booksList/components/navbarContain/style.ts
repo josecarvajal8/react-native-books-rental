@@ -1,18 +1,21 @@
 import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../../../config/constants";
+import utilities from "../../../../helpers/utilities";
 
 const styles = StyleSheet.create({
     containerNavBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 5,
-        paddingHorizontal: 20
+        marginTop: utilities.isAndroid() ? 20 : 5,
+        paddingHorizontal: 20,
+        zIndex: 200
     },
     searchBarNavBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 5,
-        marginLeft: 20
+        marginTop: utilities.isAndroid() ? 20 : 5,
+        marginLeft: 20,
+        zIndex: 200
     },
     opacityZero: {
         opacity: 0
@@ -26,7 +29,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white
     },
     textField: {
-        height: 30,
+        height: utilities.isAndroid() ? 50 : 30,
         width: '85%',
         marginLeft: 10,
         marginRight: 10
@@ -48,7 +51,6 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: fonts.BOLD,
         fontSize: 25,
-        lineHeight: 0,
         color: colors.white
     },
     searchIcon: {

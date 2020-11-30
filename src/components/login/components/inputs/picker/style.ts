@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     expandHeight: {
-        height: 150,
+        height: 90,
         borderRadius: 0,
         paddingBottom: 20
     },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     optionContainer:{
         alignItems: 'center',
-        marginBottom: 10
+        margin:10
     }
 });
 export default styles;

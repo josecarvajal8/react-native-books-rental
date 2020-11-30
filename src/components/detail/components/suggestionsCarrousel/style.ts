@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     imageBook: {
         width: 140,
         height: 110,
-        borderWidth:1
     }
 });
 export default styles;

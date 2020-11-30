@@ -32,7 +32,8 @@ const PickerField = ({ value, setFieldValue, fieldId, options, label }: IPicker)
         return (
             <FlatList data={options}
                 keyExtractor={({ value }) => value}
-                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                horizontal={true}
                 renderItem={({ item }) => {
                     const { label, value } = { ...item };
                     return (

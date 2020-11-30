@@ -3,12 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     cardStyle: {
         marginTop: 10,
-        justifyContent: 'center'
+        marginHorizontal: 10,
+        justifyContent: 'center',
+        marginBottom: 10
     },
     list: {
         flex: 1,
-        paddingHorizontal: 20,
-        marginTop: 10
+        marginTop: 10,
     }
 });
 export default styles;

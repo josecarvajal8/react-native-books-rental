@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import { Platform } from 'react-native';
 const has = (value: Object, key: string) => Object.prototype.hasOwnProperty.call(value, key);
 const arrayHasItems = (arr: Array<any> = []) => {
     if (Array.isArray(arr)) {
@@ -12,7 +13,6 @@ const isObject = (obj: { [key: string]: any }) => {
 const range = (start: number, stop: number, step: number) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 const isNumber = (value: any) => Object.prototype.toString.call(value) === '[object Number]';
 const saveLocalData = async (key: string, value: any) => {
-    console.log('value',value)
     try {
         await AsyncStorage.setItem(key, JSON.stringify(value));
     } catch (e) {
@@ -28,12 +28,15 @@ const getLocalData = async (key: string) => {
         throw e;
     }
 };
-const clearLocalData = async() => {
+const clearLocalData = async () => {
     try {
         await AsyncStorage.clear()
-    }catch(e){
+    } catch (e) {
         throw e;
     }
+}
+const isAndroid = () => {
+    return Platform.OS === 'android'
 }
 export default {
     has,
@@ -43,5 +46,6 @@ export default {
     range,
     saveLocalData,
     getLocalData,
-    clearLocalData
+    clearLocalData,
+    isAndroid
 }

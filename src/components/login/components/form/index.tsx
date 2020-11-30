@@ -140,8 +140,8 @@ const Form = ({ onLogin }: IForm) => {
         <View style={_styles.container}>
             <Formik
                 initialValues={formValues}
-                onSubmit={values => {
-                    onLogin(values)
+                onSubmit={async values => {
+                    await onLogin(values)
                 }}
             >
                 {({ handleChange, handleBlur, handleSubmit, values, setFieldValue }: any) =>

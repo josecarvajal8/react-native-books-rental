@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../config/constants";
+import utilities from "../../helpers/utilities";
 
 const styles = StyleSheet.create({
     container: {
@@ -9,6 +10,9 @@ const styles = StyleSheet.create({
     containerCards: {
         width: "100%",
         alignItems: 'center'
+    },
+    mBottom:{
+        marginBottom: utilities.isAndroid() ? 80 : 20
     },
     detailBook: {
         height: 300,

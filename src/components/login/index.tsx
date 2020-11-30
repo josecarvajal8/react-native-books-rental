@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import _styles from './style';
 import { Form } from './components';
 import { FETCH_DATA } from '../../context/flux/types';
@@ -40,13 +40,15 @@ const Login = (props: any) => {
     const WrappedLogin = LoadingHoc(
         () => {
             return (
-                <ScrollView style={_styles.container}>
-                    <View style={_styles.containerLogo}>
-                        <Image style={_styles.logo} source={logo} />
-                        <Text style={_styles.welcome}>{I18n.t('global.welcome')}</Text>
-                    </View>
-                    <Form onLogin={onLogin} />
-                </ScrollView >
+                <SafeAreaView style={_styles.container}>
+                    <ScrollView style={_styles.container}>
+                        <View style={_styles.containerLogo}>
+                            <Image style={_styles.logo} source={logo} />
+                            <Text style={_styles.welcome}>{I18n.t('global.welcome')}</Text>
+                        <Form onLogin={onLogin} />
+                        </View>
+                    </ScrollView >
+                </SafeAreaView>
             )
         });
     const { loading = false } = { ...state };
