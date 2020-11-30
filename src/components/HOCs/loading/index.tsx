@@ -1,9 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, View } from 'react-native';
 import { colors } from '../../../config/constants';
-import getComponentStyle from '../../../helpers/responsive';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 const Loading = (Comp: any) =>
     (props: any) => {
         const { loading = false } = { ...props }

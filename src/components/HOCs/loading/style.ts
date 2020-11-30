@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors } from "../../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     loadingContainer: {
         backgroundColor: colors.black,
         opacity: 0.4,
@@ -13,5 +14,5 @@ const styles = {
         alignItems: 'center',
         zIndex: 100,
     }
-}
+});
 export default styles;
