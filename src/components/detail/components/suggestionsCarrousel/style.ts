@@ -1,14 +1,17 @@
-const styles = {
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
     cardStyle: {
-        marginLeft: 10,
         height: 140,
-        width: 130,
         alignItems: 'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        marginHorizontal: 10,
+        marginVertical: 10,
     },
     imageBook: {
         width: 140,
         height: 110,
+        borderWidth:1
     }
-}
+});
 export default styles;

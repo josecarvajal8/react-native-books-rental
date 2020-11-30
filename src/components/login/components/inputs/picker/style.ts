@@ -2,12 +2,11 @@ import { StyleSheet } from 'react-native';
 import { colors, fonts } from '../../../../../config/constants';
 const styles = StyleSheet.create({
     container: {
-        width: 300,
         height: 50,
         borderWidth: 2,
         borderRadius: 60,
         borderColor: colors.gey_input,
-        backgroundColor: colors.white
+        backgroundColor: colors.white,
     },
     btnExpand: {
         marginLeft: 10,

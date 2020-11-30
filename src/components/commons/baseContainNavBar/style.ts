@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         marginTop: 5,
@@ -21,8 +22,7 @@ const styles = {
         width: 20
     },
     backIcon:{
-        size: 20,
         color: colors.white
     }
-}
+});
 export default styles;

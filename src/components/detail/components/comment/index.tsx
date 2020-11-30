@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
-import getComponentStyle from '../../../../helpers/responsive';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 interface IComment {
     userName: string;
     commentText: string;

@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors } from "../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
@@ -27,5 +28,5 @@ const styles = {
         borderWidth: 1,
         marginRight: 20
     }
-};
+});
 export default styles;

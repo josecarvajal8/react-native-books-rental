@@ -1,7 +1,6 @@
-import { color } from "react-native-reanimated";
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../../config/constants";
-
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
     },
@@ -18,11 +17,12 @@ const styles = {
         fontFamily: fonts.SEMIBOLD,
         fontSize: 18,
         color: colors.black,
+        width: '90%'
     },
     bookAuthor: {
         fontFamily: fonts.REGULAR,
         fontSize: 15,
         color: colors.black,
     }
-};
+});
 export default styles;

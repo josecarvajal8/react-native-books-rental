@@ -1,8 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import styles from './style';
-import getComponentStyle from '../../../helpers/responsive';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 interface ICard {
     children: React.ReactNode;
     styles?: { [key: string]: any };

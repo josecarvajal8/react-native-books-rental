@@ -90,47 +90,50 @@ const Detail = (props: any) => {
                 <NavBar key={'navbar'} >
                     <BaseContainNavBar title={I18n.t('titles.detail')} onBack={() => navigation.goBack()} />
                 </NavBar>
-                <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
-                    <View style={_styles.bookInfoContainer}>
-                        <Image style={_styles.bookImg}
-                            resizeMode={'contain'}
-                            source={{ uri: image_url }} />
-                        <View style={_styles.containerTextDetail}>
-                            <Text style={_styles.titleText}>{title}</Text>
-                            <Text style={_styles.infoText}>{author}</Text>
-                            <Text style={_styles.infoText}>{year}</Text>
-                            <Text style={_styles.infoText}>{genre}</Text>
+                <View style={_styles.containerCards}>
+                    <Card key={'detailbook'} touchable={false} styles={_styles.detailBook}>
+                        <View style={_styles.bookInfoContainer}>
+                            <Image style={_styles.bookImg}
+                                resizeMode={'contain'}
+                                source={{ uri: image_url }} />
+                            <View style={_styles.containerTextDetail}>
+                                <Text style={_styles.titleText}>{title}</Text>
+                                <Text style={_styles.infoText}>{author}</Text>
+                                <Text style={_styles.infoText}>{year}</Text>
+                                <Text style={_styles.infoText}>{genre}</Text>
+                            </View>
                         </View>
-                    </View>
-                    <View style={_styles.btnsContinaer}>
-                        <Buttons.Raised styles={_styles.btnAddWishList}
-                            action={async () => await onWishList(params, setShowModal, setModalInfo, dispatch)}>
-                            <Text style={_styles.textAdd}>{(I18n.t('detail.addToWishList')).toUpperCase()}</Text>
-                        </Buttons.Raised>
-                        <Buttons.Raised styles={_styles.btnRent}
-                            action={() => console.log('hello rent')}>
-                            <Text style={_styles.textRent}>{(I18n.t('detail.rent')).toUpperCase()}</Text>
-                        </Buttons.Raised>
-                    </View>
-                </Card>
+                        <View style={_styles.btnsContinaer}>
+                            <Buttons.Raised styles={_styles.btnAddWishList}
+                                action={async () => await onWishList(params, setShowModal, setModalInfo, dispatch)}>
+                                <Text style={_styles.textAdd}>{(I18n.t('detail.addToWishList')).toUpperCase()}</Text>
+                            </Buttons.Raised>
+                            <Buttons.Raised styles={_styles.btnRent}
+                                action={() => console.log('hello rent')}>
+                                <Text style={_styles.textRent}>{(I18n.t('detail.rent')).toUpperCase()}</Text>
+                            </Buttons.Raised>
+                        </View>
+                    </Card>
+                </View>
                 {loading ?
                     <ActivityIndicator style={_styles.activityIndicator} size={'small'} color={colors.primary} /> :
                     utilities.arrayHasItems(suggestions) &&
-                    <View key={'suggestions'}
-                        style={_styles.containerSuggestions}>
                         <SuggestionsCarrousel data={suggestions}
                             onDetailSuggest={(book: any) => navigation.push('Detail', { ...book })} />
+                    }
+                {utilities.arrayHasItems(comments) &&
+                    <View style={_styles.containerCards}>
+                        <Card key={'comments'}
+                            styles={showViewAll ?
+                                { ..._styles.commentsContainer, ..._styles.commentsContainerHeight }
+                                : _styles.commentsContainer}
+                            touchable={false}>
+                            {renderPreviewComments(comments)}
+                            {showViewAll && <Buttons.Flat action={() => navigation.navigate('Comments', { comments })} styles={_styles.btnViewAll}>
+                                <Text style={_styles.textViewAll}>{(I18n.t('detail.viewAll'))}</Text>
+                            </Buttons.Flat>}
+                        </Card>
                     </View>}
-                {utilities.arrayHasItems(comments) && <Card key={'comments'}
-                    styles={showViewAll ?
-                        { ..._styles.commentsContainer, ..._styles.commentsContainerHeight }
-                        : _styles.commentsContainer}
-                    touchable={false}>
-                    {renderPreviewComments(comments)}
-                    {showViewAll && <Buttons.Flat action={() => navigation.navigate('Comments', { comments })} styles={_styles.btnViewAll}>
-                        <Text style={_styles.textViewAll}>{(I18n.t('detail.viewAll'))}</Text>
-                    </Buttons.Flat>}
-                </Card>}
             </ScrollView>
         </>
     )

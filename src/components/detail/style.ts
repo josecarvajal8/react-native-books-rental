@@ -4,21 +4,24 @@ import { colors, fonts } from "../../config/constants";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.grey_bg
+        backgroundColor: colors.grey_bg,
+    },
+    containerCards: {
+        width: "100%",
+        alignItems: 'center'
     },
     detailBook: {
         height: 300,
         marginTop: 20,
-        marginLeft: 18
+        width: "90%"
     },
     commentsContainer: {
         height: 250,
         marginTop: 20,
-        marginLeft: 18
+        width: "90%"
     },
     containerSuggestions: {
-        marginTop: 20,
-        height: 150
+        marginTop: 20
     },
     commentsContainerHeight: {
         minHeight: 300,
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
         height: 180
     },
     bookInfoContainer: {
-       flexDirection: 'row'
+        flexDirection: 'row'
     },
     bookImg: {
         marginTop: 20,
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     },
     btnViewAll: {
         marginTop: 20,
-        marginLeft: 80,
+        marginLeft: 30
     },
     activityIndicator: {
         marginTop: 20

@@ -1,14 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { FETCH_DATA } from '../../context/flux/types';
-import getComponentStyle from '../../helpers/responsive';
 import { useAppContext } from '../../hooks';
 import { NavBar } from '../commons';
 import { LoadingHoc } from '../HOCs';
 import { FETCH_BOOKS } from './api';
 import { List, NavBarContain } from './components';
-import styles from './style';
-const _styles = getComponentStyle(styles);
+import _styles from './style';
 const getBooks = async (dispatch: any) => {
     await dispatch({
         type: FETCH_DATA,
@@ -29,10 +27,8 @@ const BookList = (props: any) => {
     }
     ), [books, searchValue])
     const WrappedBookList = LoadingHoc(() =>
-        <View style={_styles.containerList}>
             <List books={_bookList}
                 action={(book: any) => navigation.navigate('Detail', { ...book })} />
-        </View>
     );
     return (
         <View style={_styles.container}>

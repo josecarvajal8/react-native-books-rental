@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
@@ -19,13 +20,14 @@ const styles = {
     },
     cardProfile: {
         marginTop: 30,
-        height: 250
+        height: 250,
+        width: '90%'
     },
     name: {
         fontFamily: fonts.BOLD,
         fontSize: 30,
         color: colors.black,
-        width: 260,
+        width: '92%',
         marginLeft: 20
     },
     contianerBtns: {
@@ -41,5 +43,5 @@ const styles = {
         fontSize: 18,
         color: colors.primary
     }
-}
+});
 export default styles;

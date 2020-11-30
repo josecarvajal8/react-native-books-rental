@@ -1,12 +1,13 @@
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         marginTop: 20,
         marginLeft: 20,
         maxHeight: 120,
-        width: 340
+        width: '80%'
     },
     img: {
         width: 60,
@@ -15,16 +16,16 @@ const styles = {
     containerInfo: {
         marginLeft: 20
     },
-    commentText:{
+    commentText: {
         fontFamily: fonts.REGULAR,
         fontSize: 15,
-        width: 240,
+        width: '30%',
         marginTop: 3
     },
-    userName:{
+    userName: {
         fontFamily: fonts.SEMIBOLD,
         fontSize: 15,
         color: colors.black
     }
-}
+});
 export default styles;

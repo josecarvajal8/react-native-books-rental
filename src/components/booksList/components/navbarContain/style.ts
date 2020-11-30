@@ -1,6 +1,7 @@
+import { StyleSheet } from "react-native";
 import { colors, fonts } from "../../../../config/constants";
 
-const styles = {
+const styles = StyleSheet.create({
     containerNavBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -19,14 +20,14 @@ const styles = {
     searchBar: {
         flexDirection: 'row',
         height: 30,
-        width: 300,
+        width: '75%',
         alignItems: 'center',
         borderRadius: 4,
         backgroundColor: colors.white
     },
     textField: {
         height: 30,
-        width: 250,
+        width: '85%',
         marginLeft: 10,
         marginRight: 10
     },
@@ -52,16 +53,14 @@ const styles = {
     },
     searchIcon: {
         color: colors.white,
-        size: 20
     },
     closeIcon: {
         color: colors.gey_input,
-        size: 20
     },
     cancelText: {
         fontFamily: fonts.SEMIBOLD,
         fontSize: 18,
         color: colors.white
     }
-}
+});
 export default styles;
