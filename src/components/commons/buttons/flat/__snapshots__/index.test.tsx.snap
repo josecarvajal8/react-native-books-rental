@@ -14,10 +14,10 @@ exports[`Render flatButton component correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "height": 66.99776785714286,
+        "height": 45,
         "justifyContent": "center",
         "opacity": 1,
-        "width": 362.3188405797101,
+        "width": "80%",
       }
     }
   />

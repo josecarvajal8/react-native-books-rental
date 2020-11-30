@@ -8,8 +8,6 @@ exports[`Render checkBox component correctly 1`] = `
       "flexDirection": "row",
       "justifyContent": "center",
       "padding": 10,
-      "paddingHorizontal": 18.115942028985508,
-      "paddingVertical": 14.888392857142858,
     }
   }
 >
@@ -26,12 +24,12 @@ exports[`Render checkBox component correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "borderWidth": 1.8115942028985508,
-          "height": 26.799107142857146,
+          "borderWidth": 1,
+          "height": 18,
           "justifyContent": "center",
-          "marginRight": 18.115942028985508,
+          "marginRight": 10,
           "opacity": 1,
-          "width": 32.608695652173914,
+          "width": 18,
         }
       }
     >
@@ -39,15 +37,21 @@ exports[`Render checkBox component correctly 1`] = `
         style={
           Object {
             "backgroundColor": "#ffffff",
-            "height": 17.86607142857143,
-            "width": 21.73913043478261,
+            "height": 12,
+            "width": 12,
           }
         }
       />
     </View>
   </RNGestureHandlerButton>
-  <Text>
-    test_field
+  <Text
+    style={
+      Object {
+        "fontFamily": "Montserrat-Regular",
+      }
+    }
+  >
+    [missing "en.test_field" translation]
   </Text>
 </View>
 `;

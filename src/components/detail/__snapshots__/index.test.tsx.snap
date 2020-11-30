@@ -1,295 +1,310 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render detail component correctly 1`] = `
-<RCTScrollView
-  bounces={false}
-  style={
-    Object {
-      "backgroundColor": "#dee7ea",
-      "flex": 1,
+Array [
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "height": 100,
+        "width": "100%",
+        "zIndex": 100,
+      }
     }
-  }
->
-  <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
+  >
+    <Image
+      resizeMode="contain"
+      source={
+        Object {
+          "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+        }
+      }
       style={
         Object {
-          "height": 148.88392857142858,
-          "width": 750,
+          "height": 200,
+          "position": "absolute",
+          "top": -45,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 5,
+          "paddingHorizontal": 5,
+          "zIndex": 200,
         }
       }
     >
-      <Image
-        resizeMode="contain"
-        source={
-          Object {
-            "testUri": "../../../src/assets/img/bc_nav_bar_3x.png",
+      <RNGestureHandlerButton
+        collapsable={false}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+      >
+        <View
+          accessible={true}
+          style={
+            Object {
+              "height": 20,
+              "opacity": 1,
+              "width": 20,
+            }
           }
-        }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 20,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </RNGestureHandlerButton>
+      <Text
+        forwardedRef={[Function]}
         style={
           Object {
-            "height": 297.76785714285717,
-            "position": "absolute",
-            "top": -66.99776785714286,
-            "width": 753.6231884057971,
+            "color": "#ffffff",
+            "fontFamily": "Montserrat-Bold",
+            "fontSize": 25,
+          }
+        }
+      >
+        [missing "en.titles.detail" translation]
+      </Text>
+      <View
+        style={
+          Object {
+            "width": 20,
           }
         }
       />
+    </View>
+  </RCTSafeAreaView>,
+  <RCTScrollView
+    bounces={false}
+    style={
+      Object {
+        "backgroundColor": "#dee7ea",
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
         style={
           Object {
             "alignItems": "center",
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-            "marginTop": 7.444196428571429,
-            "paddingHorizontal": 36.231884057971016,
+            "width": "100%",
           }
         }
       >
-        <RNGestureHandlerButton
-          collapsable={false}
-          onGestureEvent={[Function]}
-          onGestureHandlerEvent={[Function]}
-          onGestureHandlerStateChange={[Function]}
-          onHandlerStateChange={[Function]}
-          rippleColor={0}
+        <View
+          style={
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderRadius": 8,
+              "elevation": 10,
+              "height": 300,
+              "marginTop": 20,
+              "shadowColor": "rgba(46, 48, 48, 1)",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 1,
+              },
+              "shadowOpacity": 0.3,
+              "shadowRadius": 2,
+              "width": "90%",
+            }
+          }
         >
           <View
-            accessible={true}
             style={
               Object {
-                "height": 29.776785714285715,
-                "opacity": 1,
-                "width": 36.231884057971016,
+                "flexDirection": "row",
               }
             }
           >
-            <Text
-              allowFontScaling={false}
+            <Image
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "",
+                }
+              }
               style={
-                Array [
-                  Object {
-                    "color": "#ffffff",
-                    "fontSize": 20,
-                  },
-                  undefined,
-                  Object {
-                    "fontFamily": "FontAwesome",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
+                Object {
+                  "height": 130,
+                  "marginLeft": 30,
+                  "marginTop": 20,
+                  "width": 100,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginLeft": 20,
+                  "marginTop": 20,
+                }
               }
             >
-              
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Montserrat-SemiBold",
+                    "fontSize": 20,
+                  }
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#626565",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 15,
+                    "marginTop": 2,
+                  }
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#626565",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 15,
+                    "marginTop": 2,
+                  }
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#626565",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 15,
+                    "marginTop": 2,
+                  }
+                }
+              >
+                
+              </Text>
+            </View>
           </View>
-        </RNGestureHandlerButton>
-        <Text
-          forwardedRef={[Function]}
-          style={
-            Object {
-              "color": "#ffffff",
-              "fontFamily": "Montserrat-Bold",
-              "fontSize": 45.289855072463766,
-            }
-          }
-        >
-          [missing "en.titles.detail" translation]
-        </Text>
-        <View
-          style={
-            Object {
-              "width": 36.231884057971016,
-            }
-          }
-        />
-      </View>
-    </RCTSafeAreaView>
-    <View
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": 14.492753623188406,
-          "height": 446.6517857142857,
-          "marginLeft": 32.608695652173914,
-          "marginTop": 29.776785714285715,
-          "shadowColor": "rgba(46, 48, 48, 1)",
-          "shadowOffset": Object {
-            "height": 1.4888392857142858,
-            "width": 1.8115942028985508,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 2,
-          "width": 688.4057971014493,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flexDirection": "row",
-          }
-        }
-      >
-        <Image
-          resizeMode="contain"
-          source={
-            Object {
-              "uri": "",
-            }
-          }
-          style={
-            Object {
-              "height": 193.54910714285717,
-              "marginLeft": 54.34782608695652,
-              "marginTop": 29.776785714285715,
-              "width": 181.15942028985506,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "marginLeft": 36.231884057971016,
-              "marginTop": 29.776785714285715,
-            }
-          }
-        >
-          <Text
+          <View
             style={
               Object {
-                "color": "#000",
-                "fontFamily": "Montserrat-SemiBold",
-                "fontSize": 36.231884057971016,
+                "marginLeft": 30,
               }
             }
           >
-            
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#626565",
-                "fontFamily": "Montserrat-Regular",
-                "fontSize": 27.17391304347826,
-                "marginTop": 2.9776785714285716,
-              }
-            }
-          >
-            
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#626565",
-                "fontFamily": "Montserrat-Regular",
-                "fontSize": 27.17391304347826,
-                "marginTop": 2.9776785714285716,
-              }
-            }
-          >
-            
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#626565",
-                "fontFamily": "Montserrat-Regular",
-                "fontSize": 27.17391304347826,
-                "marginTop": 2.9776785714285716,
-              }
-            }
-          >
-            
-          </Text>
+            <RNGestureHandlerButton
+              collapsable={false}
+              onGestureEvent={[Function]}
+              onGestureHandlerEvent={[Function]}
+              onGestureHandlerStateChange={[Function]}
+              onHandlerStateChange={[Function]}
+              rippleColor={0}
+            >
+              <View
+                accessible={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#0baee6",
+                    "borderRadius": 30,
+                    "borderWidth": 1,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "marginTop": 30,
+                    "opacity": 1,
+                    "padding": 10,
+                    "width": 300,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#0baee6",
+                      "fontFamily": "Montserrat-SemiBold",
+                      "fontSize": 18,
+                    }
+                  }
+                >
+                  [MISSING "EN.DETAIL.ADDTOWISHLIST" TRANSLATION]
+                </Text>
+              </View>
+            </RNGestureHandlerButton>
+            <RNGestureHandlerButton
+              collapsable={false}
+              onGestureEvent={[Function]}
+              onGestureHandlerEvent={[Function]}
+              onGestureHandlerStateChange={[Function]}
+              onHandlerStateChange={[Function]}
+              rippleColor={0}
+            >
+              <View
+                accessible={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#0baee6",
+                    "borderRadius": 30,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "marginTop": 15,
+                    "opacity": 1,
+                    "padding": 10,
+                    "width": 300,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Montserrat-SemiBold",
+                      "fontSize": 18,
+                    }
+                  }
+                >
+                  [MISSING "EN.DETAIL.RENT" TRANSLATION]
+                </Text>
+              </View>
+            </RNGestureHandlerButton>
+          </View>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "marginLeft": 54.34782608695652,
-          }
-        }
-      >
-        <RNGestureHandlerButton
-          collapsable={false}
-          onGestureEvent={[Function]}
-          onGestureHandlerEvent={[Function]}
-          onGestureHandlerStateChange={[Function]}
-          onHandlerStateChange={[Function]}
-          rippleColor={0}
-        >
-          <View
-            accessible={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#ffffff",
-                "borderColor": "#0baee6",
-                "borderRadius": 54.34782608695652,
-                "borderWidth": 1.8115942028985508,
-                "height": 59.55357142857143,
-                "justifyContent": "center",
-                "marginTop": 44.66517857142858,
-                "opacity": 1,
-                "width": 543.4782608695652,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#0baee6",
-                  "fontFamily": "Montserrat-SemiBold",
-                  "fontSize": 32.608695652173914,
-                }
-              }
-            >
-              [MISSING "EN.DETAIL.ADDTOWISHLIST" TRANSLATION]
-            </Text>
-          </View>
-        </RNGestureHandlerButton>
-        <RNGestureHandlerButton
-          collapsable={false}
-          onGestureEvent={[Function]}
-          onGestureHandlerEvent={[Function]}
-          onGestureHandlerStateChange={[Function]}
-          onHandlerStateChange={[Function]}
-          rippleColor={0}
-        >
-          <View
-            accessible={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#0baee6",
-                "borderRadius": 54.34782608695652,
-                "height": 59.55357142857143,
-                "justifyContent": "center",
-                "marginTop": 22.33258928571429,
-                "opacity": 1,
-                "width": 543.4782608695652,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "fontFamily": "Montserrat-SemiBold",
-                  "fontSize": 32.608695652173914,
-                }
-              }
-            >
-              [MISSING "EN.DETAIL.RENT" TRANSLATION]
-            </Text>
-          </View>
-        </RNGestureHandlerButton>
-      </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;

@@ -15,11 +15,11 @@ exports[`Render raisedButton component correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#0baee6",
-        "borderRadius": 54.34782608695652,
-        "height": 66.99776785714286,
+        "borderRadius": 30,
+        "height": 45,
         "justifyContent": "center",
         "opacity": 1,
-        "width": 362.3188405797101,
+        "padding": 10,
       }
     }
   />
